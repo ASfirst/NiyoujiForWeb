@@ -1,0 +1,33 @@
+group 'com.jeramtough'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+
+repositories {
+    mavenLocal()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.java-websocket:Java-WebSocket:1.3.7"
+
+    compile fileTree(dir: 'src\\main\\webapp\\WEB-INF\\lib', include: ['*.jar'])
+
+    compile group: 'org.apache.tomcat', name: 'tomcat-servlet-api', version: '8.5.24'
+
+    compile group: 'org.springframework', name: 'spring-context', version: '5.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '5.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '5.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '5.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-websocket', version: '5.0.2.RELEASE'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+}

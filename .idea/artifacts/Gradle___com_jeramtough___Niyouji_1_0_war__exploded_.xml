@@ -1,0 +1,38 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : com.jeramtough : Niyouji-1.0.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Niyouji_main/web/Web Gradle : Niyouji-1.0.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Niyouji_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/Jtlog3.jar" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-servlet-api:8.5.24" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-websocket:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.3" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
