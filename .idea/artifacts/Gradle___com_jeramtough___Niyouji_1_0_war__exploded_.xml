@@ -18,6 +18,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/Jtlog3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/JtUtil.jar" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-servlet-api:8.5.24" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.0.2.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-websocket:5.0.2.RELEASE" />
@@ -29,8 +30,10 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.0.2.RELEASE" />
           <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.3" />
           <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.3" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.0.2.RELEASE" />
           <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.3" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.44/1dbb13ed90bab048d51559dbb17374d1bbf096fc/fastjson-1.2.44.jar" />
         </element>
       </element>
     </root>

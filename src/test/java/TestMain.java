@@ -7,7 +7,7 @@ public class TestMain
 	{
 		try
 		{
-			String urlString1="ws://localhost:8080/niyouji/testHandler.do";
+			String urlString1="ws://localhost:8080/niyouji/performerHandler.do";
 			TestWebSocketClient client =
 					new TestWebSocketClient(new URI
 							(urlString1));
