@@ -1,6 +1,10 @@
 package com.jeramtough.niyouji.entrance.handler;
 
 import com.jeramtough.jtlog3.P;
+import com.jeramtough.niyouji.bean.socket.SocketMessage;
+import com.jeramtough.niyouji.bean.socket.command.CommandActions;
+import com.jeramtough.niyouji.bean.socket.command.CommandFactory;
+import com.jeramtough.niyouji.bean.socket.command.CreatePerformingRoomCommand;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -11,26 +15,22 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
  * @author 11718
  */
 @Controller
-public class PerformerHandler extends TextWebSocketHandler
+public class PerformerHandler extends BaseWebSocketHandler
 {
-	@Override
-	public void afterConnectionEstablished(WebSocketSession session) throws Exception
-	{
-		super.afterConnectionEstablished(session);
-	}
 	
 	@Override
-	protected void handleTextMessage(WebSocketSession session, TextMessage message)
-			throws Exception
+	public void handleSocketMessage(WebSocketSession session, SocketMessage socketMessage)
 	{
-		System.out.println(message.getPayload());
-	}
-	
-	@Override
-	public void afterConnectionClosed(WebSocketSession session, CloseStatus status)
-			throws Exception
-	{
-		super.afterConnectionClosed(session, status);
-		P.arrive();
+		switch (socketMessage.getCommandAction())
+		{
+			case CommandActions.CREATE_PERFORMING_ROOM:
+				
+				CreatePerformingRoomCommand createPerformingRoomCommand= CommandFactory
+						.toCreatePerformingRoomCommand(socketMessage.getCommand());
+				P.debug(createPerformingRoomCommand);
+				
+				break;
+			default:
+		}
 	}
 }

@@ -18,8 +18,9 @@ public class Test
 		SocketMessage socketMessage=new SocketMessage();
 		socketMessage.setCommand("sdfsadfsadf");
 		socketMessage.setCommandAction(1);
-		socketMessage.setCommand1(command);
-		System.out.println(JSON.toJSONString(socketMessage));
+		
+		command=CommandFactory.toCreatePerformingRoomCommand(JSON.toJSONString(command));
+		System.out.println(command.getCreateTime());
 		
 		
 	}

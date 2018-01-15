@@ -17,6 +17,7 @@ public class CreatePerformingRoomCommand
 	
 	private String travelnoteTitle;
 	
+	
 	public String getRoomId()
 	{
 		return roomId;
@@ -75,5 +76,14 @@ public class CreatePerformingRoomCommand
 	public void setTravelnoteTitle(String travelnoteTitle)
 	{
 		this.travelnoteTitle = travelnoteTitle;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "CreatePerformingRoomCommand{" + "roomId='" + roomId + '\'' + ", createTime='" +
+				createTime + '\'' + ", ownerId='" + ownerId + '\'' + ", coverType='" +
+				coverType + '\'' + ", coverResourceUrl='" + coverResourceUrl + '\'' +
+				", travelnoteTitle='" + travelnoteTitle + '\'' + '}';
 	}
 }

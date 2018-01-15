@@ -8,7 +8,8 @@ public class SocketMessage
 	private int commandAction;
 	
 	private String command;
-	private Object command1;
+	
+	
 	
 	public int getCommandAction()
 	{
@@ -30,13 +31,4 @@ public class SocketMessage
 		this.command = command;
 	}
 	
-	public Object getCommand1()
-	{
-		return command1;
-	}
-	
-	public void setCommand1(Object command1)
-	{
-		this.command1 = command1;
-	}
 }
