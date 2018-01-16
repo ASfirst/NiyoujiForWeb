@@ -1,4 +1,4 @@
-package com.jeramtough.niyouji.bean.socket;
+package com.jeramtough.niyouji.bean.socketmessage;
 
 /**
  * @author 11718
@@ -9,7 +9,14 @@ public class SocketMessage
 	
 	private String command;
 	
+	public SocketMessage()
+	{
+	}
 	
+	public SocketMessage(int commandAction)
+	{
+		this.commandAction = commandAction;
+	}
 	
 	public int getCommandAction()
 	{

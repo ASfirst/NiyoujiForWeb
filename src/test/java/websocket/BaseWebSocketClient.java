@@ -2,7 +2,7 @@ package websocket;
 
 import com.alibaba.fastjson.JSON;
 import com.jeramtough.jtlog3.WithLogger;
-import com.jeramtough.niyouji.bean.socket.SocketMessage;
+import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 
