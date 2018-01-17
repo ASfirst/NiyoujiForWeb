@@ -22,7 +22,7 @@ public class TestMain
 				createPerformingRoomCommand.setCoverResourceUrl("http://abc.com");
 				createPerformingRoomCommand.setCoverType("image");
 				createPerformingRoomCommand.setOwnerId("1");
-				createPerformingRoomCommand.setRoomId(IdUtil.getUUID());
+				createPerformingRoomCommand.setTravelnoteId(IdUtil.getUUID());
 				createPerformingRoomCommand.setTravelnoteTitle("都是非法第三方啊是艾丝凡");
 				SocketMessage socketMessage = SocketMessageFactory
 						.processCreatePerformingRoomSocketMessage(createPerformingRoomCommand);
