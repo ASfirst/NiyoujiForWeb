@@ -26,7 +26,7 @@ public interface PerformerBusiness
 	
 	void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand);
 	
-	void travelntePageSetBackgroundMusic(PageSetBackgroundMusicCommand
+	void travelnotePageSetBackgroundMusic(PageSetBackgroundMusicCommand
 			pageSetBackgroundMusicCommand);
 	
 	void sentPerformerBarrage(SendPerformerBarrageCommand sendPerformerBarrageCommand);

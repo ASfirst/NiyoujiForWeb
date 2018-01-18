@@ -1,26 +1,24 @@
-package com.jeramtough.niyouji.bean.socketmessage.command.performer;
+package com.jeramtough.niyouji.bean.travelnote;
 
 /**
  * @author 11718
- * on 2018  January 18 Thursday 03:02.
  */
-
-public class SendPerformerBarrageCommand extends PerformerCommand
+public class Barrage
 {
-	private int position;
+	private String barrageId;
 	private String nickname;
 	private boolean isPerformers;
 	private String content;
 	private String createTime;
 	
-	public int getPosition()
+	public String getBarrageId()
 	{
-		return position;
+		return barrageId;
 	}
 	
-	public void setPosition(int position)
+	public void setBarrageId(String barrageId)
 	{
-		this.position = position;
+		this.barrageId = barrageId;
 	}
 	
 	public String getNickname()

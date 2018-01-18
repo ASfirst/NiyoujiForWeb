@@ -79,17 +79,25 @@ public class PerformerHandler extends BaseWebSocketHandler
 						PerformerCommandParser
 								.parsePageSetBackgroundMusicCommand(socketMessage);
 				performerBusiness
-						.travelntePageSetBackgroundMusic(pageSetBackgroundMusicCommand);
+						.travelnotePageSetBackgroundMusic(pageSetBackgroundMusicCommand);
 				break;
-				
+			
 			case PerformerCommandActions.PAGE_TEXT_CHANGED:
-				
+				PageTextChangeCommand pageTextChangeCommand =
+						PerformerCommandParser.parsePageTextChangeCommand(socketMessage);
+				performerBusiness.travelnotePageTextChange(pageTextChangeCommand);
 				break;
-				
+			
 			case PerformerCommandActions.SENT_PERFORMER_BARRAGE:
+				SendPerformerBarrageCommand sendPerformerBarrageCommand =
+						PerformerCommandParser.parseSendPerformerBarrageCommand(socketMessage);
+				performerBusiness.sentPerformerBarrage(sendPerformerBarrageCommand);
 				break;
 			
 			case PerformerCommandActions.TRAVELNOTE_END:
+				TravelnoteEndCommand travelnoteEndCommand =
+						PerformerCommandParser.parseTravelnoteEndCommand(socketMessage);
+				performerBusiness.travelnoteEnd(travelnoteEndCommand);
 				break;
 			
 			default:

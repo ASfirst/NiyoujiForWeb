@@ -84,4 +84,18 @@ public class Travelnote
 	{
 		this.travelnoteTitle = travelnoteTitle;
 	}
+	
+	public ArrayList<TravelnotePage> getTravelnotePages()
+	{
+		return travelnotePages;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Travelnote{" + "travelnoteId='" + travelnoteId + '\'' + ", createTime='" +
+				createTime + '\'' + ", coverType='" + coverType + '\'' +
+				", coverResourceUrl='" + coverResourceUrl + '\'' + ", travelnoteTitle='" +
+				travelnoteTitle + '\'' + ", travelnotePages=" + travelnotePages + '}';
+	}
 }

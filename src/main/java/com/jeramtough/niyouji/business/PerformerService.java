@@ -1,8 +1,11 @@
 package com.jeramtough.niyouji.business;
 
+import com.jeramtough.jtlog3.P;
+import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
 import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
+import com.jeramtough.niyouji.bean.travelnote.Barrage;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
@@ -10,6 +13,8 @@ import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.WebSocketSession;
+
+import java.util.ArrayList;
 
 @Service
 public class PerformerService implements PerformerBusiness
@@ -80,45 +85,101 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public void travelnotePageSetImage(PageSetImageCommand pageSetImageCommand)
+	public synchronized void travelnotePageSetImage(PageSetImageCommand pageSetImageCommand)
 	{
-	
+		PerformingRoom performingRoom =
+				performingRoomsManager.getPerformingRoom(pageSetImageCommand.getPerformerId());
+		Travelnote travelnote = performingRoom.getTravelnote();
+		TravelnotePage travelnotePage =
+				travelnote.getTravelnotePage(pageSetImageCommand.getPosition());
+		travelnotePage.setResourceUrl(pageSetImageCommand.getImageUrl());
 	}
 	
 	@Override
-	public void travelnotePageSetVideo(PageSetVideoCommand pageSetVideoCommand)
+	public synchronized void travelnotePageSetVideo(PageSetVideoCommand pageSetVideoCommand)
 	{
-	
+		PerformingRoom performingRoom =
+				performingRoomsManager.getPerformingRoom(pageSetVideoCommand.getPerformerId());
+		Travelnote travelnote = performingRoom.getTravelnote();
+		TravelnotePage travelnotePage =
+				travelnote.getTravelnotePage(pageSetVideoCommand.getPosition());
+		travelnotePage.setResourceUrl(pageSetVideoCommand.getVideoUrl());
 	}
 	
 	@Override
-	public void travelnotePageTextChange(PageTextChangeCommand pageTextChangeCommand)
+	public synchronized void travelnotePageTextChange(
+			PageTextChangeCommand pageTextChangeCommand)
 	{
-	
+		PerformingRoom performingRoom = performingRoomsManager
+				.getPerformingRoom(pageTextChangeCommand.getPerformerId());
+		
+		Travelnote travelnote = performingRoom.getTravelnote();
+		TravelnotePage travelnotePage =
+				travelnote.getTravelnotePage(pageTextChangeCommand.getPosition());
+		
+		String textContent = travelnotePage.getTextContent();
+		textContent = StringUtil.addOrDeleteWords(textContent, pageTextChangeCommand.isAdded(),
+				pageTextChangeCommand.getStart(), pageTextChangeCommand.getWords());
+		travelnotePage.setTextContent(textContent);
 	}
 	
 	@Override
-	public void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand)
+	public synchronized void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand)
 	{
-	
+		PerformingRoom performingRoom =
+				performingRoomsManager.getPerformingRoom(pageSetThemeCommand.getPerformerId());
+		Travelnote travelnote = performingRoom.getTravelnote();
+		TravelnotePage travelnotePage =
+				travelnote.getTravelnotePage(pageSetThemeCommand.getPosition());
+		
+		travelnotePage.setThemePosition(pageSetThemeCommand.getThemePosition());
 	}
 	
 	@Override
-	public void travelntePageSetBackgroundMusic(
+	public synchronized void travelnotePageSetBackgroundMusic(
 			PageSetBackgroundMusicCommand pageSetBackgroundMusicCommand)
 	{
-	
+		PerformingRoom performingRoom = performingRoomsManager
+				.getPerformingRoom(pageSetBackgroundMusicCommand.getPerformerId());
+		
+		Travelnote travelnote = performingRoom.getTravelnote();
+		TravelnotePage travelnotePage =
+				travelnote.getTravelnotePage(pageSetBackgroundMusicCommand.getPosition());
+		travelnotePage.setBackgroundMusicPath(pageSetBackgroundMusicCommand.getMusicPath());
 	}
 	
 	@Override
-	public void sentPerformerBarrage(SendPerformerBarrageCommand sendPerformerBarrageCommand)
+	public synchronized void sentPerformerBarrage(
+			SendPerformerBarrageCommand sendPerformerBarrageCommand)
 	{
-	
+		PerformingRoom performingRoom = performingRoomsManager
+				.getPerformingRoom(sendPerformerBarrageCommand.getPerformerId());
+		
+		Travelnote travelnote = performingRoom.getTravelnote();
+		TravelnotePage travelnotePage =
+				travelnote.getTravelnotePage(sendPerformerBarrageCommand.getPosition());
+		
+		Barrage barrage = new Barrage();
+		barrage.setContent(sendPerformerBarrageCommand.getContent());
+		barrage.setCreateTime(sendPerformerBarrageCommand.getCreateTime());
+		barrage.setIsPerformers(sendPerformerBarrageCommand.getIsPerformers());
+		barrage.setNickname(sendPerformerBarrageCommand.getNickname());
+		
+		travelnotePage.addBarrage(barrage);
 	}
 	
 	@Override
-	public void travelnoteEnd(TravelnoteEndCommand travelnoteEndCommand)
+	public synchronized void travelnoteEnd(TravelnoteEndCommand travelnoteEndCommand)
 	{
-	
+		PerformingRoom performingRoom = performingRoomsManager
+				.getPerformingRoom(travelnoteEndCommand.getPerformerId());
+		
+		Travelnote travelnote = performingRoom.getTravelnote();
+		ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
+		
+		for (TravelnotePage travelnotePage : travelnotePages)
+		{
+			P.debug(travelnotePage.toString());
+		}
 	}
 }

@@ -10,6 +10,9 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.io.IOException;
 
+/**
+ * @author 11718
+ */
 public abstract class BaseWebSocketHandler extends TextWebSocketHandler implements WithLogger
 {
 	

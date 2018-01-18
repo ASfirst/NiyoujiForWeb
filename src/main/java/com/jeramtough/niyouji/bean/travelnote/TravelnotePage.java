@@ -1,5 +1,7 @@
 package com.jeramtough.niyouji.bean.travelnote;
 
+import java.util.ArrayList;
+
 public class TravelnotePage
 {
 	private String pageId;
@@ -7,6 +9,15 @@ public class TravelnotePage
 	private String pageType;
 	private int themePosition;
 	private String resourceUrl;
+	private String textContent;
+	private String backgroundMusicPath;
+	
+	private ArrayList<Barrage> barrages;
+	
+	public TravelnotePage()
+	{
+		barrages = new ArrayList<>();
+	}
 	
 	public String getPageId()
 	{
@@ -56,5 +67,40 @@ public class TravelnotePage
 	public void setResourceUrl(String resourceUrl)
 	{
 		this.resourceUrl = resourceUrl;
+	}
+	
+	public String getTextContent()
+	{
+		return textContent;
+	}
+	
+	public void setTextContent(String textContent)
+	{
+		this.textContent = textContent;
+	}
+	
+	public String getBackgroundMusicPath()
+	{
+		return backgroundMusicPath;
+	}
+	
+	public void setBackgroundMusicPath(String backgroundMusicPath)
+	{
+		this.backgroundMusicPath = backgroundMusicPath;
+	}
+	
+	public void addBarrage(Barrage barrage)
+	{
+		barrages.add(barrage);
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "TravelnotePage{" + "pageId='" + pageId + '\'' + ", createTime='" + createTime +
+				'\'' + ", pageType='" + pageType + '\'' + ", themePosition=" + themePosition +
+				", resourceUrl='" + resourceUrl + '\'' + ", textContent='" + textContent +
+				'\'' + ", backgroundMusicPath='" + backgroundMusicPath + '\'' + ", barrages=" +
+				barrages + '}';
 	}
 }

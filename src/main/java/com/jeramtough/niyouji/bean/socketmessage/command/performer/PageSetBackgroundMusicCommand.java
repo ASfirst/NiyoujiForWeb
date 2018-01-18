@@ -7,5 +7,26 @@ package com.jeramtough.niyouji.bean.socketmessage.command.performer;
 
 public class PageSetBackgroundMusicCommand extends PerformerCommand
 {
-
+	private int position;
+	private String musicPath;
+	
+	public int getPosition()
+	{
+		return position;
+	}
+	
+	public void setPosition(int position)
+	{
+		this.position = position;
+	}
+	
+	public String getMusicPath()
+	{
+		return musicPath;
+	}
+	
+	public void setMusicPath(String musicPath)
+	{
+		this.musicPath = musicPath;
+	}
 }

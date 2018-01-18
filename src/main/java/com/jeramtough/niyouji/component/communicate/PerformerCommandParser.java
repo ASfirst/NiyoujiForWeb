@@ -53,4 +53,20 @@ public class PerformerCommandParser
 		return JSON
 				.parseObject(socketMessage.getCommand(), PageSetBackgroundMusicCommand.class);
 	}
+	
+	public static PageTextChangeCommand parsePageTextChangeCommand(SocketMessage socketMessage)
+	{
+		return JSON.parseObject(socketMessage.getCommand(), PageTextChangeCommand.class);
+	}
+	
+	public static SendPerformerBarrageCommand parseSendPerformerBarrageCommand(
+			SocketMessage socketMessage)
+	{
+		return JSON.parseObject(socketMessage.getCommand(), SendPerformerBarrageCommand.class);
+	}
+	
+	public static TravelnoteEndCommand parseTravelnoteEndCommand(SocketMessage socketMessage)
+	{
+		return JSON.parseObject(socketMessage.getCommand(), TravelnoteEndCommand.class);
+	}
 }

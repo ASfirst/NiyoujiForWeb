@@ -7,4 +7,26 @@ package com.jeramtough.niyouji.bean.socketmessage.command.performer;
 
 public class PageSetThemeCommand extends PerformerCommand
 {
+	private int position;
+	private int themePosition;
+	
+	public int getPosition()
+	{
+		return position;
+	}
+	
+	public void setPosition(int position)
+	{
+		this.position = position;
+	}
+	
+	public int getThemePosition()
+	{
+		return themePosition;
+	}
+	
+	public void setThemePosition(int themePosition)
+	{
+		this.themePosition = themePosition;
+	}
 }
