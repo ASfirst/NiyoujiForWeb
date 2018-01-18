@@ -5,6 +5,6 @@ package com.jeramtough.niyouji.bean.socketmessage.command.performer;
  *         on 2018  January 18 Thursday 02:59.
  */
 
-public class PageTextChangeCommand
+public class PageTextChangeCommand extends PerformerCommand
 {
 }

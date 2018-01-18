@@ -5,6 +5,6 @@ package com.jeramtough.niyouji.bean.socketmessage.command.performer;
  *         on 2018  January 18 Thursday 03:02.
  */
 
-public class SendPerformerBarrageCommand
+public class SendPerformerBarrageCommand extends PerformerCommand
 {
 }

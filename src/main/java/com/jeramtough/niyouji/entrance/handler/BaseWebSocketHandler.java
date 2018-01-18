@@ -24,7 +24,7 @@ public abstract class BaseWebSocketHandler extends TextWebSocketHandler implemen
 	protected void handleTextMessage(WebSocketSession session, TextMessage message)
 			throws Exception
 	{
-		getP().info("handle a new message for ["+message.getPayload()+"]");
+		getP().info("handle a new message ["+message.getPayload()+"] from client");
 		handleSocketMessage(session,
 				JSON.parseObject(message.getPayload(), SocketMessage.class));
 	}

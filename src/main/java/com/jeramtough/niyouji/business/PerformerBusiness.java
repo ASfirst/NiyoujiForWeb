@@ -1,10 +1,7 @@
 package com.jeramtough.niyouji.business;
 
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.AddPageCommand;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.CreatePerformingRoomCommand;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.DeletePageCommand;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.SelectPageCommand;
+import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
 import org.springframework.web.socket.WebSocketSession;
 
 /**
@@ -20,4 +17,19 @@ public interface PerformerBusiness
 	void travelnoteSelectPage(SelectPageCommand selectPageCommand);
 	
 	void travelnoteDeletePage(DeletePageCommand deletePageCommand);
+	
+	void travelnotePageSetImage(PageSetImageCommand pageSetImageCommand);
+	
+	void travelnotePageSetVideo(PageSetVideoCommand pageSetVideoCommand);
+	
+	void travelnotePageTextChange(PageTextChangeCommand pageTextChangeCommand);
+	
+	void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand);
+	
+	void travelntePageSetBackgroundMusic(PageSetBackgroundMusicCommand
+			pageSetBackgroundMusicCommand);
+	
+	void sentPerformerBarrage(SendPerformerBarrageCommand sendPerformerBarrageCommand);
+	
+	void travelnoteEnd(TravelnoteEndCommand travelnoteEndCommand);
 }

@@ -2,10 +2,7 @@ package com.jeramtough.niyouji.business;
 
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.AddPageCommand;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.CreatePerformingRoomCommand;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.DeletePageCommand;
-import com.jeramtough.niyouji.bean.socketmessage.command.performer.SelectPageCommand;
+import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
@@ -80,5 +77,48 @@ public class PerformerService implements PerformerBusiness
 		Travelnote travelnote = performingRoom.getTravelnote();
 		
 		travelnote.deleteTravelnotePage(deletePageCommand.getPosition());
+	}
+	
+	@Override
+	public void travelnotePageSetImage(PageSetImageCommand pageSetImageCommand)
+	{
+	
+	}
+	
+	@Override
+	public void travelnotePageSetVideo(PageSetVideoCommand pageSetVideoCommand)
+	{
+	
+	}
+	
+	@Override
+	public void travelnotePageTextChange(PageTextChangeCommand pageTextChangeCommand)
+	{
+	
+	}
+	
+	@Override
+	public void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand)
+	{
+	
+	}
+	
+	@Override
+	public void travelntePageSetBackgroundMusic(
+			PageSetBackgroundMusicCommand pageSetBackgroundMusicCommand)
+	{
+	
+	}
+	
+	@Override
+	public void sentPerformerBarrage(SendPerformerBarrageCommand sendPerformerBarrageCommand)
+	{
+	
+	}
+	
+	@Override
+	public void travelnoteEnd(TravelnoteEndCommand travelnoteEndCommand)
+	{
+	
 	}
 }

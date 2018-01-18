@@ -5,7 +5,7 @@ package com.jeramtough.niyouji.bean.socketmessage.command.performer;
  *         on 2018  January 18 Thursday 03:01.
  */
 
-public class PageSetBackgroundMusicCommand
+public class PageSetBackgroundMusicCommand extends PerformerCommand
 {
 
 }
