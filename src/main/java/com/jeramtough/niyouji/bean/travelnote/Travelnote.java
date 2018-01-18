@@ -1,5 +1,7 @@
 package com.jeramtough.niyouji.bean.travelnote;
 
+import java.util.ArrayList;
+
 /**
  * @author 11718
  */
@@ -11,6 +13,28 @@ public class Travelnote
 	private String coverType;
 	private String coverResourceUrl;
 	private String travelnoteTitle;
+	
+	private ArrayList<TravelnotePage> travelnotePages;
+	
+	public Travelnote()
+	{
+		travelnotePages = new ArrayList<>();
+	}
+	
+	public void addTravelnotePage(TravelnotePage travelnotePage)
+	{
+		travelnotePages.add(travelnotePage);
+	}
+	
+	public TravelnotePage getTravelnotePage(int position)
+	{
+		return travelnotePages.get(position);
+	}
+	
+	public void deleteTravelnotePage(int position)
+	{
+		travelnotePages.remove(position);
+	}
 	
 	public String getTravelnoteId()
 	{

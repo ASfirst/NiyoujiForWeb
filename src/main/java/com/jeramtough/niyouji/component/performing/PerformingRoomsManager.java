@@ -21,4 +21,9 @@ public class PerformingRoomsManager
 	{
 		performingRooms.put(performerId, performingRoom);
 	}
+	
+	public PerformingRoom getPerformingRoom(String performerId)
+	{
+		return performingRooms.get(performerId);
+	}
 }

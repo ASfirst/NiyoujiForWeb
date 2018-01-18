@@ -1,16 +1,22 @@
-package com.jeramtough.niyouji.bean.socketmessage.command.performer;
+package com.jeramtough.niyouji.bean.travelnote;
 
-/**
- * @author 11718
- *         on 2018  January 17 Wednesday 20:33.
- */
-
-public class AddPageCommand
+public class TravelnotePage
 {
-	private String performerId;
+	private String pageId;
 	private String createTime;
 	private String pageType;
 	private int themePosition;
+	private String resourceUrl;
+	
+	public String getPageId()
+	{
+		return pageId;
+	}
+	
+	public void setPageId(String pageId)
+	{
+		this.pageId = pageId;
+	}
 	
 	public String getCreateTime()
 	{
@@ -42,13 +48,13 @@ public class AddPageCommand
 		this.themePosition = themePosition;
 	}
 	
-	public String getPerformerId()
+	public String getResourceUrl()
 	{
-		return performerId;
+		return resourceUrl;
 	}
 	
-	public void setPerformerId(String performerId)
+	public void setResourceUrl(String resourceUrl)
 	{
-		this.performerId = performerId;
+		this.resourceUrl = resourceUrl;
 	}
 }

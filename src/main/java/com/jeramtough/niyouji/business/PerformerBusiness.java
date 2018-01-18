@@ -1,7 +1,10 @@
 package com.jeramtough.niyouji.business;
 
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
+import com.jeramtough.niyouji.bean.socketmessage.command.performer.AddPageCommand;
 import com.jeramtough.niyouji.bean.socketmessage.command.performer.CreatePerformingRoomCommand;
+import com.jeramtough.niyouji.bean.socketmessage.command.performer.DeletePageCommand;
+import com.jeramtough.niyouji.bean.socketmessage.command.performer.SelectPageCommand;
 import org.springframework.web.socket.WebSocketSession;
 
 /**
@@ -11,4 +14,10 @@ public interface PerformerBusiness
 {
 	SocketMessage createPerformingRoom(WebSocketSession webSocketSession,
 			CreatePerformingRoomCommand createPerformingRoomCommand);
+	
+	void travelnoteAddPage(AddPageCommand addPageCommand);
+	
+	void travelnoteSelectPage(SelectPageCommand selectPageCommand);
+	
+	void travelnoteDeletePage(DeletePageCommand deletePageCommand);
 }
