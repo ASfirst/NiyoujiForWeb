@@ -9,7 +9,6 @@ public class Travelnote
 {
 	private String travelnoteId;
 	private String createTime;
-	private String ownerId;
 	private String coverType;
 	private String coverResourceUrl;
 	private String travelnoteTitle;
@@ -54,16 +53,6 @@ public class Travelnote
 	public void setCreateTime(String createTime)
 	{
 		this.createTime = createTime;
-	}
-	
-	public String getOwnerId()
-	{
-		return ownerId;
-	}
-	
-	public void setOwnerId(String ownerId)
-	{
-		this.ownerId = ownerId;
 	}
 	
 	public String getCoverType()

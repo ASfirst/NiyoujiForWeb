@@ -30,10 +30,17 @@ public class PerformerService implements PerformerBusiness
 	public SocketMessage createPerformingRoom(WebSocketSession webSocketSession,
 			CreatePerformingRoomCommand createPerformingRoomCommand)
 	{
+		Travelnote travelnote = new Travelnote();
+		travelnote.setTravelnoteTitle(createPerformingRoomCommand.getTravelnoteTitle());
+		travelnote.setCreateTime(createPerformingRoomCommand.getCreateTime());
+		travelnote.setCoverType(createPerformingRoomCommand.getCoverType());
+		travelnote.setCoverResourceUrl(createPerformingRoomCommand.getCoverResourceUrl());
+		
 		PerformingRoom performingRoom =
-				new PerformingRoom(webSocketSession, createPerformingRoomCommand);
-		performingRoomsManager
-				.addPerformingRoom(createPerformingRoomCommand.getOwnerId(), performingRoom);
+				new PerformingRoom(createPerformingRoomCommand.getPerformerId(), travelnote,
+						webSocketSession);
+		performingRoomsManager.addPerformingRoom(createPerformingRoomCommand.getPerformerId(),
+				performingRoom);
 		
 		SocketMessage socketMessage =
 				new SocketMessage(ServerCommandActions.CREATING_PERFORMING_ROOM_FINISH);
@@ -43,12 +50,12 @@ public class PerformerService implements PerformerBusiness
 	@Override
 	public synchronized void travelnoteAddPage(AddPageCommand addPageCommand)
 	{
-		PerformingRoom performingRoom =performingRoomsManager.getPerformingRoom
-				(addPageCommand.getPerformerId());
+		PerformingRoom performingRoom =
+				performingRoomsManager.getPerformingRoom(addPageCommand.getPerformerId());
 		
-		Travelnote travelnote=performingRoom.getTravelnote();
+		Travelnote travelnote = performingRoom.getTravelnote();
 		
-		TravelnotePage travelnotePage=new TravelnotePage();
+		TravelnotePage travelnotePage = new TravelnotePage();
 		travelnotePage.setCreateTime(addPageCommand.getCreateTime());
 		travelnotePage.setPageType(addPageCommand.getPageType());
 		travelnotePage.setThemePosition(addPageCommand.getThemePosition());
@@ -67,10 +74,10 @@ public class PerformerService implements PerformerBusiness
 	@Override
 	public synchronized void travelnoteDeletePage(DeletePageCommand deletePageCommand)
 	{
-		PerformingRoom performingRoom =performingRoomsManager.getPerformingRoom
-				(deletePageCommand.getPerformerId());
+		PerformingRoom performingRoom =
+				performingRoomsManager.getPerformingRoom(deletePageCommand.getPerformerId());
 		
-		Travelnote travelnote=performingRoom.getTravelnote();
+		Travelnote travelnote = performingRoom.getTravelnote();
 		
 		travelnote.deleteTravelnotePage(deletePageCommand.getPosition());
 	}

@@ -2,22 +2,20 @@ package com.jeramtough.niyouji.bean.socketmessage.command.performer;
 
 /**
  * @author 11718
- *         on 2018  January 17 Wednesday 19:16.
+ *         on 2018  January 18 Thursday 14:42.
  */
 
-public class SelectPageCommand
+public class PerformerCommand
 {
-	private int position;
 	private String performerId;
 	
-	public int getPosition()
+	public PerformerCommand()
 	{
-		return position;
 	}
 	
-	public void setPosition(int position)
+	public PerformerCommand(String performerId)
 	{
-		this.position = position;
+		this.performerId = performerId;
 	}
 	
 	public String getPerformerId()
