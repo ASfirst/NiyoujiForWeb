@@ -12,7 +12,7 @@ public interface PerformerBusiness
 	SocketMessage createPerformingRoom(WebSocketSession webSocketSession,
 			CreatePerformingRoomCommand createPerformingRoomCommand);
 	
-	void travelnoteAddPage(AddPageCommand addPageCommand);
+	void travelnoteAddPage(SocketMessage socketMessage);
 	
 	void travelnoteSelectPage(SelectPageCommand selectPageCommand);
 	

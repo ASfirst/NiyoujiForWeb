@@ -20,6 +20,7 @@
     <websocket:handlers>
         <websocket:mapping path="/testHandler.do" handler="testHandler"/>
         <websocket:mapping path="/performerHandler.do" handler="performerHandler"/>
+        <websocket:mapping path="/audienceHandler.do" handler="audienceHandler"/>
     </websocket:handlers>
 
 

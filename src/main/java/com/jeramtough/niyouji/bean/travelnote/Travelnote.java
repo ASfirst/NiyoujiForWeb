@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Travelnote
 {
 	private String travelnoteId;
+	private String performerId;
 	private String createTime;
 	private String coverType;
 	private String coverResourceUrl;
@@ -90,12 +91,14 @@ public class Travelnote
 		return travelnotePages;
 	}
 	
-	@Override
-	public String toString()
+	public String getPerformerId()
 	{
-		return "Travelnote{" + "travelnoteId='" + travelnoteId + '\'' + ", createTime='" +
-				createTime + '\'' + ", coverType='" + coverType + '\'' +
-				", coverResourceUrl='" + coverResourceUrl + '\'' + ", travelnoteTitle='" +
-				travelnoteTitle + '\'' + ", travelnotePages=" + travelnotePages + '}';
+		return performerId;
 	}
+	
+	public void setPerformerId(String performerId)
+	{
+		this.performerId = performerId;
+	}
+	
 }

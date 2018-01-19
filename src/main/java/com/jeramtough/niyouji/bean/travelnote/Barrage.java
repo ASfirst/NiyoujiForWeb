@@ -6,6 +6,8 @@ package com.jeramtough.niyouji.bean.travelnote;
 public class Barrage
 {
 	private String barrageId;
+	private String pageId;
+	private String travelnoteId;
 	private String nickname;
 	private boolean isPerformers;
 	private String content;
@@ -54,6 +56,26 @@ public class Barrage
 	public String getCreateTime()
 	{
 		return createTime;
+	}
+	
+	public String getPageId()
+	{
+		return pageId;
+	}
+	
+	public void setPageId(String pageId)
+	{
+		this.pageId = pageId;
+	}
+	
+	public String getTravelnoteId()
+	{
+		return travelnoteId;
+	}
+	
+	public void setTravelnoteId(String travelnoteId)
+	{
+		this.travelnoteId = travelnoteId;
 	}
 	
 	public void setCreateTime(String createTime)

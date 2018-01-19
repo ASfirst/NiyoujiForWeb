@@ -1,4 +1,4 @@
-package com.jeramtough.niyouji.component.communicate;
+package com.jeramtough.niyouji.component.communicate.parser;
 
 import com.alibaba.fastjson.JSON;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;

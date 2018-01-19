@@ -1,6 +1,11 @@
 package com.jeramtough.niyouji.entrance.handler;
 
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
+import com.jeramtough.niyouji.bean.socketmessage.action.AudienceCommandActions;
+import com.jeramtough.niyouji.bean.socketmessage.command.audience.EnterPerformingRoomCommand;
+import com.jeramtough.niyouji.business.AudienceBusiness;
+import com.jeramtough.niyouji.component.communicate.parser.AudienceCommandParser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.WebSocketSession;
 
@@ -10,9 +15,27 @@ import org.springframework.web.socket.WebSocketSession;
 @Controller
 public class AudienceHandler extends BaseWebSocketHandler
 {
+	
+	private AudienceBusiness audienceBusiness;
+	
+	@Autowired
+	public AudienceHandler(AudienceBusiness audienceBusiness)
+	{
+		this.audienceBusiness = audienceBusiness;
+	}
+	
 	@Override
 	public void handleSocketMessage(WebSocketSession session, SocketMessage socketMessage)
 	{
-	
+		int action = socketMessage.getCommandAction();
+		switch (action)
+		{
+			case AudienceCommandActions.ENTER_PERFORMING_ROOM:
+				EnterPerformingRoomCommand enterPerformingRoomCommand =
+						AudienceCommandParser.parseEnterPerformingRoomCommand(socketMessage);
+				audienceBusiness.enterPerformingRoom(session, enterPerformingRoomCommand);
+				break;
+			default:
+		}
 	}
 }

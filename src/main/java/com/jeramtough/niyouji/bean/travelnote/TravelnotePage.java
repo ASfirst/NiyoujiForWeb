@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class TravelnotePage
 {
 	private String pageId;
+	private String travelnoteId;
 	private String createTime;
 	private String pageType;
 	private int themePosition;
@@ -13,6 +14,16 @@ public class TravelnotePage
 	private String backgroundMusicPath;
 	
 	private ArrayList<Barrage> barrages;
+	
+	public String getTravelnoteId()
+	{
+		return travelnoteId;
+	}
+	
+	public void setTravelnoteId(String travelnoteId)
+	{
+		this.travelnoteId = travelnoteId;
+	}
 	
 	public TravelnotePage()
 	{
@@ -94,13 +105,4 @@ public class TravelnotePage
 		barrages.add(barrage);
 	}
 	
-	@Override
-	public String toString()
-	{
-		return "TravelnotePage{" + "pageId='" + pageId + '\'' + ", createTime='" + createTime +
-				'\'' + ", pageType='" + pageType + '\'' + ", themePosition=" + themePosition +
-				", resourceUrl='" + resourceUrl + '\'' + ", textContent='" + textContent +
-				'\'' + ", backgroundMusicPath='" + backgroundMusicPath + '\'' + ", barrages=" +
-				barrages + '}';
-	}
 }

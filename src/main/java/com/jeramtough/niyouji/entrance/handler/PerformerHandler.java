@@ -4,7 +4,7 @@ import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.PerformerCommandActions;
 import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
 import com.jeramtough.niyouji.business.PerformerBusiness;
-import com.jeramtough.niyouji.component.communicate.PerformerCommandParser;
+import com.jeramtough.niyouji.component.communicate.parser.PerformerCommandParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.WebSocketSession;
@@ -26,7 +26,8 @@ public class PerformerHandler extends BaseWebSocketHandler
 	@Override
 	public void handleSocketMessage(WebSocketSession session, SocketMessage socketMessage)
 	{
-		switch (socketMessage.getCommandAction())
+		int action=socketMessage.getCommandAction();
+		switch (action)
 		{
 			case PerformerCommandActions.CREATE_PERFORMING_ROOM:
 				CreatePerformingRoomCommand createPerformingRoomCommand =
@@ -39,9 +40,8 @@ public class PerformerHandler extends BaseWebSocketHandler
 				break;
 			
 			case PerformerCommandActions.ADDED_PAGE:
-				AddPageCommand addPageCommand =
-						PerformerCommandParser.parseAddPageCommand(socketMessage);
-				performerBusiness.travelnoteAddPage(addPageCommand);
+				
+				performerBusiness.travelnoteAddPage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.SELECTED_PAGE:
