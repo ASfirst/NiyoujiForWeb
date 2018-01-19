@@ -1,6 +1,5 @@
 package com.jeramtough.niyouji.business;
 
-import com.alibaba.fastjson.JSON;
 import com.jeramtough.jtlog3.P;
 import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
@@ -9,19 +8,19 @@ import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
 import com.jeramtough.niyouji.bean.travelnote.Barrage;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
-import com.jeramtough.niyouji.component.communicate.factory.PerformerSocketMessageFactory;
 import com.jeramtough.niyouji.component.communicate.parser.PerformerCommandParser;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
 import com.jeramtough.niyouji.util.SocketSessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class PerformerService implements PerformerBusiness
@@ -38,10 +37,14 @@ public class PerformerService implements PerformerBusiness
 				new SynchronousQueue<Runnable>());
 	}
 	
+	
 	@Override
-	public SocketMessage createPerformingRoom(WebSocketSession webSocketSession,
-			CreatePerformingRoomCommand createPerformingRoomCommand)
+	public void createPerformingRoom(WebSocketSession webSocketSession,
+			SocketMessage socketMessage)
 	{
+		CreatePerformingRoomCommand createPerformingRoomCommand =
+				PerformerCommandParser.parseCreatePerformingRoomCommand(socketMessage);
+		
 		Travelnote travelnote = new Travelnote();
 		travelnote.setPerformerId(createPerformingRoomCommand.getPerformerId());
 		travelnote.setTravelnoteTitle(createPerformingRoomCommand.getTravelnoteTitle());
@@ -53,9 +56,10 @@ public class PerformerService implements PerformerBusiness
 		performingRoomsManager.addPerformingRoom(createPerformingRoomCommand.getPerformerId(),
 				performingRoom);
 		
-		SocketMessage socketMessage =
+		//会送以创建房间完成命令给主播
+		SocketMessage socketMessage1 =
 				new SocketMessage(ServerCommandActions.CREATING_PERFORMING_ROOM_FINISH);
-		return socketMessage;
+		SocketSessionUtil.sendSocketMessage(webSocketSession, socketMessage1);
 	}
 	
 	@Override
@@ -82,14 +86,18 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnoteSelectPage(SelectPageCommand selectPageCommand)
+	public synchronized void travelnoteSelectPage(SocketMessage socketMessage)
 	{
-	
+		SelectPageCommand selectPageCommand =
+				PerformerCommandParser.parseSelectPageCommand(socketMessage);
 	}
 	
 	@Override
-	public synchronized void travelnoteDeletePage(DeletePageCommand deletePageCommand)
+	public synchronized void travelnoteDeletePage(SocketMessage socketMessage)
 	{
+		DeletePageCommand deletePageCommand =
+				PerformerCommandParser.parseDeletePageCommand(socketMessage);
+		
 		PerformingRoom performingRoom =
 				performingRoomsManager.getPerformingRoom(deletePageCommand.getPerformerId());
 		
@@ -99,8 +107,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetImage(PageSetImageCommand pageSetImageCommand)
+	public synchronized void travelnotePageSetImage(SocketMessage socketMessage)
 	{
+		PageSetImageCommand pageSetImageCommand =
+				PerformerCommandParser.parsePageSetImageCommand(socketMessage);
+		
 		PerformingRoom performingRoom =
 				performingRoomsManager.getPerformingRoom(pageSetImageCommand.getPerformerId());
 		Travelnote travelnote = performingRoom.getTravelnote();
@@ -110,8 +121,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetVideo(PageSetVideoCommand pageSetVideoCommand)
+	public synchronized void travelnotePageSetVideo(SocketMessage socketMessage)
 	{
+		PageSetVideoCommand pageSetVideoCommand =
+				PerformerCommandParser.parsePageSetVideoCommand(socketMessage);
+		
 		PerformingRoom performingRoom =
 				performingRoomsManager.getPerformingRoom(pageSetVideoCommand.getPerformerId());
 		Travelnote travelnote = performingRoom.getTravelnote();
@@ -121,9 +135,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageTextChange(
-			PageTextChangeCommand pageTextChangeCommand)
+	public synchronized void travelnotePageTextChange(SocketMessage socketMessage)
 	{
+		PageTextChangeCommand pageTextChangeCommand =
+				PerformerCommandParser.parsePageTextChangeCommand(socketMessage);
+		
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(pageTextChangeCommand.getPerformerId());
 		
@@ -138,8 +154,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand)
+	public synchronized void travelnotePageSetTheme(SocketMessage socketMessage)
 	{
+		PageSetThemeCommand pageSetThemeCommand =
+				PerformerCommandParser.parsePageSetThemeCommand(socketMessage);
+		
 		PerformingRoom performingRoom =
 				performingRoomsManager.getPerformingRoom(pageSetThemeCommand.getPerformerId());
 		Travelnote travelnote = performingRoom.getTravelnote();
@@ -150,9 +169,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetBackgroundMusic(
-			PageSetBackgroundMusicCommand pageSetBackgroundMusicCommand)
+	public synchronized void travelnotePageSetBackgroundMusic(SocketMessage socketMessage)
 	{
+		PageSetBackgroundMusicCommand pageSetBackgroundMusicCommand =
+				PerformerCommandParser.parsePageSetBackgroundMusicCommand(socketMessage);
+		
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(pageSetBackgroundMusicCommand.getPerformerId());
 		
@@ -163,9 +184,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void sentPerformerBarrage(
-			SendPerformerBarrageCommand sendPerformerBarrageCommand)
+	public synchronized void sentPerformerBarrage(SocketMessage socketMessage)
 	{
+		SendPerformerBarrageCommand sendPerformerBarrageCommand =
+				PerformerCommandParser.parseSendPerformerBarrageCommand(socketMessage);
+		
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(sendPerformerBarrageCommand.getPerformerId());
 		
@@ -183,8 +206,11 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnoteEnd(TravelnoteEndCommand travelnoteEndCommand)
+	public synchronized void travelnoteEnd(SocketMessage socketMessage)
 	{
+		TravelnoteEndCommand travelnoteEndCommand =
+				PerformerCommandParser.parseTravelnoteEndCommand(socketMessage);
+		
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(travelnoteEndCommand.getPerformerId());
 		

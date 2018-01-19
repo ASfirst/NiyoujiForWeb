@@ -26,17 +26,11 @@ public class PerformerHandler extends BaseWebSocketHandler
 	@Override
 	public void handleSocketMessage(WebSocketSession session, SocketMessage socketMessage)
 	{
-		int action=socketMessage.getCommandAction();
+		int action = socketMessage.getCommandAction();
 		switch (action)
 		{
 			case PerformerCommandActions.CREATE_PERFORMING_ROOM:
-				CreatePerformingRoomCommand createPerformingRoomCommand =
-						PerformerCommandParser.parseCreatePerformingRoomCommand(socketMessage);
-				
-				//创建房间并且返回客户端创建完成消息
-				SocketMessage socketMessage1 = performerBusiness
-						.createPerformingRoom(session, createPerformingRoomCommand);
-				sendSocketMessage(session, socketMessage1);
+				performerBusiness.createPerformingRoom(session, socketMessage);
 				break;
 			
 			case PerformerCommandActions.ADDED_PAGE:
@@ -45,59 +39,41 @@ public class PerformerHandler extends BaseWebSocketHandler
 				break;
 			
 			case PerformerCommandActions.SELECTED_PAGE:
-				SelectPageCommand selectPageCommand =
-						PerformerCommandParser.parseSelectPageCommand(socketMessage);
-				performerBusiness.travelnoteSelectPage(selectPageCommand);
+				
+				performerBusiness.travelnoteSelectPage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.DELETED_PAGE:
-				DeletePageCommand deletePageCommand =
-						PerformerCommandParser.parseDeletePageCommand(socketMessage);
-				performerBusiness.travelnoteDeletePage(deletePageCommand);
+				
+				performerBusiness.travelnoteDeletePage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.PAGE_SET_IMAGE:
-				PageSetImageCommand pageSetImageCommand =
-						PerformerCommandParser.parsePageSetImageCommand(socketMessage);
-				performerBusiness.travelnotePageSetImage(pageSetImageCommand);
+				performerBusiness.travelnotePageSetImage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.PAGE_SET_VIDEO:
-				PageSetVideoCommand pageSetVideoCommand =
-						PerformerCommandParser.parsePageSetVideoCommand(socketMessage);
-				performerBusiness.travelnotePageSetVideo(pageSetVideoCommand);
+				performerBusiness.travelnotePageSetVideo(socketMessage);
 				break;
 			
 			case PerformerCommandActions.PAGE_SET_THEME:
-				PageSetThemeCommand pageSetThemeCommand =
-						PerformerCommandParser.parsePageSetThemeCommand(socketMessage);
-				performerBusiness.travelnotePageSetTheme(pageSetThemeCommand);
+				performerBusiness.travelnotePageSetTheme(socketMessage);
 				break;
 			
 			case PerformerCommandActions.PAGE_SET_BACKGROUND_MUSIC:
-				PageSetBackgroundMusicCommand pageSetBackgroundMusicCommand =
-						PerformerCommandParser
-								.parsePageSetBackgroundMusicCommand(socketMessage);
-				performerBusiness
-						.travelnotePageSetBackgroundMusic(pageSetBackgroundMusicCommand);
+				performerBusiness.travelnotePageSetBackgroundMusic(socketMessage);
 				break;
 			
 			case PerformerCommandActions.PAGE_TEXT_CHANGED:
-				PageTextChangeCommand pageTextChangeCommand =
-						PerformerCommandParser.parsePageTextChangeCommand(socketMessage);
-				performerBusiness.travelnotePageTextChange(pageTextChangeCommand);
+				performerBusiness.travelnotePageTextChange(socketMessage);
 				break;
 			
 			case PerformerCommandActions.SENT_PERFORMER_BARRAGE:
-				SendPerformerBarrageCommand sendPerformerBarrageCommand =
-						PerformerCommandParser.parseSendPerformerBarrageCommand(socketMessage);
-				performerBusiness.sentPerformerBarrage(sendPerformerBarrageCommand);
+				performerBusiness.sentPerformerBarrage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.TRAVELNOTE_END:
-				TravelnoteEndCommand travelnoteEndCommand =
-						PerformerCommandParser.parseTravelnoteEndCommand(socketMessage);
-				performerBusiness.travelnoteEnd(travelnoteEndCommand);
+				performerBusiness.travelnoteEnd(socketMessage);
 				break;
 			
 			default:

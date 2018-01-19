@@ -9,27 +9,25 @@ import org.springframework.web.socket.WebSocketSession;
  */
 public interface PerformerBusiness
 {
-	SocketMessage createPerformingRoom(WebSocketSession webSocketSession,
-			CreatePerformingRoomCommand createPerformingRoomCommand);
+	void createPerformingRoom(WebSocketSession webSocketSession, SocketMessage socketMessage);
 	
 	void travelnoteAddPage(SocketMessage socketMessage);
 	
-	void travelnoteSelectPage(SelectPageCommand selectPageCommand);
+	void travelnoteSelectPage(SocketMessage socketMessage);
 	
-	void travelnoteDeletePage(DeletePageCommand deletePageCommand);
+	void travelnoteDeletePage(SocketMessage socketMessage);
 	
-	void travelnotePageSetImage(PageSetImageCommand pageSetImageCommand);
+	void travelnotePageSetImage(SocketMessage socketMessage);
 	
-	void travelnotePageSetVideo(PageSetVideoCommand pageSetVideoCommand);
+	void travelnotePageSetVideo(SocketMessage socketMessage);
 	
-	void travelnotePageTextChange(PageTextChangeCommand pageTextChangeCommand);
+	void travelnotePageTextChange(SocketMessage socketMessage);
 	
-	void travelnotePageSetTheme(PageSetThemeCommand pageSetThemeCommand);
+	void travelnotePageSetTheme(SocketMessage socketMessage);
 	
-	void travelnotePageSetBackgroundMusic(PageSetBackgroundMusicCommand
-			pageSetBackgroundMusicCommand);
+	void travelnotePageSetBackgroundMusic(SocketMessage socketMessage);
 	
-	void sentPerformerBarrage(SendPerformerBarrageCommand sendPerformerBarrageCommand);
+	void sentPerformerBarrage(SocketMessage socketMessage);
 	
-	void travelnoteEnd(TravelnoteEndCommand travelnoteEndCommand);
+	void travelnoteEnd(SocketMessage socketMessage);
 }

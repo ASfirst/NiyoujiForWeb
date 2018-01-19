@@ -1,7 +1,8 @@
+import com.alibaba.fastjson.JSON;
 import com.jeramtough.jtutil.DateTimeUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
+import com.jeramtough.niyouji.bean.socketmessage.action.PerformerCommandActions;
 import com.jeramtough.niyouji.bean.socketmessage.command.performer.CreatePerformingRoomCommand;
-import com.jeramtough.niyouji.component.communicate.factory.PerformerSocketMessageFactory;
 import websocket.PerformerWebSocketClient;
 
 public class PerformerTest
@@ -23,8 +24,9 @@ public class PerformerTest
 				createPerformingRoomCommand.setCreateTime(DateTimeUtil.getCurrentDateTime());
 				createPerformingRoomCommand.setPerformerId("1");
 				createPerformingRoomCommand.setTravelnoteTitle("这是测试游记");
-				SocketMessage socketMessage = PerformerSocketMessageFactory
-						.processCreatePerformingRoomSocketMessage(createPerformingRoomCommand);
+				SocketMessage socketMessage =new SocketMessage(PerformerCommandActions
+						.CREATE_PERFORMING_ROOM);
+				socketMessage.setCommand(JSON.toJSONString(createPerformingRoomCommand));
 				
 				client.sendSocketMessage(socketMessage);
 			}
