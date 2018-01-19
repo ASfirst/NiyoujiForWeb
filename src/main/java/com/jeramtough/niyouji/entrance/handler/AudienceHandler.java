@@ -31,9 +31,7 @@ public class AudienceHandler extends BaseWebSocketHandler
 		switch (action)
 		{
 			case AudienceCommandActions.ENTER_PERFORMING_ROOM:
-				EnterPerformingRoomCommand enterPerformingRoomCommand =
-						AudienceCommandParser.parseEnterPerformingRoomCommand(socketMessage);
-				audienceBusiness.enterPerformingRoom(session, enterPerformingRoomCommand);
+				audienceBusiness.enterPerformingRoom(session, socketMessage);
 				break;
 			default:
 		}

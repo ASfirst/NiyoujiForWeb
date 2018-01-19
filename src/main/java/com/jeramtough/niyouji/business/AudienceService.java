@@ -1,6 +1,8 @@
 package com.jeramtough.niyouji.business;
 
+import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.command.audience.EnterPerformingRoomCommand;
+import com.jeramtough.niyouji.component.communicate.parser.AudienceCommandParser;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +25,11 @@ public class AudienceService implements AudienceBusiness
 	
 	@Override
 	public void enterPerformingRoom(WebSocketSession session,
-			EnterPerformingRoomCommand enterPerformingRoomCommand)
+			SocketMessage socketMessage)
 	{
+		EnterPerformingRoomCommand enterPerformingRoomCommand =
+				AudienceCommandParser.parseEnterPerformingRoomCommand(socketMessage);
+		
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(enterPerformingRoomCommand.getPerformerId());
 		
