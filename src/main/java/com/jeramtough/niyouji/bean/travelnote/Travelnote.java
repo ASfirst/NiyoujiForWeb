@@ -7,7 +7,6 @@ import java.util.ArrayList;
 /**
  * @author 11718
  */
-@Component
 public class Travelnote
 {
 	private String travelnoteId;

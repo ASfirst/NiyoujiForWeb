@@ -1,5 +1,6 @@
 package com.jeramtough.niyouji.business;
 
+import com.jeramtough.niyouji.bean.travelnote.LiveTravelnoteCover;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
@@ -23,7 +24,7 @@ public class LiveTravelnoteService implements LiveTravelnoteBusiness
 	}
 	
 	@Override
-	public Travelnote[] getLiveTravelnotes()
+	public LiveTravelnoteCover[] getLiveTravelnoteCovers()
 	{
 		int size=8;
 		List<PerformingRoom> performingRooms=performingRoomsManager.getAllPerformingRooms();
@@ -32,13 +33,25 @@ public class LiveTravelnoteService implements LiveTravelnoteBusiness
 			size=performingRooms.size();
 		}
 		
-		Travelnote[] travelnotes=new Travelnote[size];
-		
+		LiveTravelnoteCover[] liveTravelnoteCovers=new LiveTravelnoteCover[size];
 		for (int i=0;i<size;i++)
 		{
-			travelnotes[i]=performingRooms.get(i).getTravelnote();
+			Travelnote travelnote=performingRooms.get(i).getTravelnote();
+			LiveTravelnoteCover liveTravelnoteCover=new LiveTravelnoteCover();
+			
+			liveTravelnoteCover.setAttentionsCount(travelnote.getAttentionsCount());
+			liveTravelnoteCover.setCoverResourceUrl(travelnote.getCoverResourceUrl());
+			liveTravelnoteCover.setCoverType(travelnote.getCoverType());
+			liveTravelnoteCover.setCreateTime(travelnote.getCreateTime());
+			liveTravelnoteCover.setPerformerId(travelnote.getPerformerId());
+			
+			//这部分业务代码未完成哦
+			liveTravelnoteCover.setPerformerNickname("Nickname");
+			liveTravelnoteCover.setTravelnoteTitle(travelnote.getTravelnoteTitle());
+			
+			liveTravelnoteCovers[i]=liveTravelnoteCover;
 		}
 		
-		return travelnotes;
+		return liveTravelnoteCovers;
 	}
 }
