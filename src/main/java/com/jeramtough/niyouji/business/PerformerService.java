@@ -90,6 +90,12 @@ public class PerformerService implements PerformerBusiness
 	{
 		SelectPageCommand selectPageCommand =
 				PerformerCommandParser.parseSelectPageCommand(socketMessage);
+		
+		PerformingRoom performingRoom =
+				performingRoomsManager.getPerformingRoom(selectPageCommand.getPerformerId());
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -104,6 +110,9 @@ public class PerformerService implements PerformerBusiness
 		Travelnote travelnote = performingRoom.getTravelnote();
 		
 		travelnote.deleteTravelnotePage(deletePageCommand.getPosition());
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -118,6 +127,9 @@ public class PerformerService implements PerformerBusiness
 		TravelnotePage travelnotePage =
 				travelnote.getTravelnotePage(pageSetImageCommand.getPosition());
 		travelnotePage.setResourceUrl(pageSetImageCommand.getImageUrl());
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -132,6 +144,9 @@ public class PerformerService implements PerformerBusiness
 		TravelnotePage travelnotePage =
 				travelnote.getTravelnotePage(pageSetVideoCommand.getPosition());
 		travelnotePage.setResourceUrl(pageSetVideoCommand.getVideoUrl());
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -151,6 +166,9 @@ public class PerformerService implements PerformerBusiness
 		textContent = StringUtil.addOrDeleteWords(textContent, pageTextChangeCommand.isAdded(),
 				pageTextChangeCommand.getStart(), pageTextChangeCommand.getWords());
 		travelnotePage.setTextContent(textContent);
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -166,6 +184,9 @@ public class PerformerService implements PerformerBusiness
 				travelnote.getTravelnotePage(pageSetThemeCommand.getPosition());
 		
 		travelnotePage.setThemePosition(pageSetThemeCommand.getThemePosition());
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -181,6 +202,9 @@ public class PerformerService implements PerformerBusiness
 		TravelnotePage travelnotePage =
 				travelnote.getTravelnotePage(pageSetBackgroundMusicCommand.getPosition());
 		travelnotePage.setBackgroundMusicPath(pageSetBackgroundMusicCommand.getMusicPath());
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -203,6 +227,9 @@ public class PerformerService implements PerformerBusiness
 		barrage.setNickname(sendPerformerBarrageCommand.getNickname());
 		
 		travelnotePage.addBarrage(barrage);
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	@Override
@@ -221,6 +248,9 @@ public class PerformerService implements PerformerBusiness
 		{
 			P.debug(travelnotePage.toString());
 		}
+		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}
 	
 	

@@ -17,6 +17,16 @@
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.jeramtough.niyouji"/>
 
+
+    <mvc:view-resolvers>
+        <mvc:content-negotiation>
+            <mvc:default-views>
+                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+            </mvc:default-views>
+        </mvc:content-negotiation>
+        <mvc:jsp/>
+    </mvc:view-resolvers>
+
     <websocket:handlers>
         <websocket:mapping path="/testHandler.do" handler="testHandler"/>
         <websocket:mapping path="/performerHandler.do" handler="performerHandler"/>

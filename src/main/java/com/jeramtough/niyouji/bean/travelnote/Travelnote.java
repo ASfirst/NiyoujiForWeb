@@ -1,10 +1,13 @@
 package com.jeramtough.niyouji.bean.travelnote;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 
 /**
  * @author 11718
  */
+@Component
 public class Travelnote
 {
 	private String travelnoteId;
@@ -13,6 +16,7 @@ public class Travelnote
 	private String coverType;
 	private String coverResourceUrl;
 	private String travelnoteTitle;
+	private int attentionsCount=0;
 	
 	private ArrayList<TravelnotePage> travelnotePages;
 	
@@ -101,4 +105,13 @@ public class Travelnote
 		this.performerId = performerId;
 	}
 	
+	public int getAttentionsCount()
+	{
+		return attentionsCount;
+	}
+	
+	public void setAttentionsCount(int attentionsCount)
+	{
+		this.attentionsCount = attentionsCount;
+	}
 }

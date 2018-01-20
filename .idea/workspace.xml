@@ -7,9 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceBusiness.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/AudienceHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/AudienceHandler.java" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___com_jeramtough___Niyouji_1_0_war__exploded_.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___com_jeramtough___Niyouji_1_0_war__exploded_.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/11718.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/11718.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Niyouji_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Niyouji_main.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Niyouji_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Niyouji_test.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/bean/travelnote/Travelnote.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/bean/travelnote/Travelnote.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/AudienceBusiness.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/AudienceBusiness.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/AudienceService.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/AudienceService.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/PerformerService.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/PerformerService.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/component/performing/PerformingRoom.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/component/performing/PerformingRoom.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/AudienceHandler.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/AudienceHandler.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/spring-config.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/spring-config.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/bean/travelnote/Travelnote.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/bean/travelnote/Travelnote.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/AudienceBusiness.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/AudienceBusiness.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/AudienceService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/AudienceService.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/PerformerService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/PerformerService.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/component/performing/PerformingRoom.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/component/performing/PerformingRoom.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/AudienceHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/AudienceHandler.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -59,36 +87,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AudienceHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/AudienceHandler.java">
+      <file leaf-file-name="PerformerService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AudienceBusiness.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceBusiness.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AudienceService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+            <state relative-caret-position="3227">
+              <caret line="249" column="9" lean-forward="false" selection-start-line="249" selection-start-column="9" selection-end-line="249" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiveTravelnoteController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/LiveTravelnoteController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Travelnote.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1937#1938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiveTravelnoteBusiness.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteBusiness.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiveTravelnoteService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-98">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerformingRoomsManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="38" column="72" lean-forward="false" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/TestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="21" column="5" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerformingRoom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="851">
+              <caret line="52" column="1" lean-forward="false" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+              <folding>
+                <element signature="e#1017#1018#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1303#1304#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -298,8 +385,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3031226034422" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="298648329" />
+        <entry key="$PROJECT_DIR$" value="3031578157444" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="2934750271" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="1300424531" />
       </map>
     </option>
@@ -412,14 +499,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socket/command/CommandAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socket/command/CommandActions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socket/command/Command.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socket/SocketMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socket/command/CommandFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socket/command/CreatePerformingRoomCommand.java" />
         <option value="$PROJECT_DIR$/src/test/java/websocket/BaseWebSocketClient.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/SocketMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/socketmessage/command/CommandParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/CommandParser.java" />
@@ -435,34 +518,38 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/client/ClientCommandActions.java" />
         <option value="$PROJECT_DIR$/src/test/java/ThreadTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/ClientCommandParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/performer/TravelnoteEndCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/action/PerformerCommandActions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/performer/SendPerformerBarrageCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/PerformerCommandParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/TravelnotePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Barrage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/action/AudienceCommandActions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/EnterPerformingRoomCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/AudienceCommandParser.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml" />
         <option value="$PROJECT_DIR$/src/test/java/websocket/PerformerWebSocketClient.java" />
         <option value="$PROJECT_DIR$/src/test/java/websocket/AudienceWebSocketClient.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestMain.java" />
         <option value="$PROJECT_DIR$/src/test/java/AudienceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/factory/PerformerSocketMessageFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/parser/PerformerCommandParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/util/SocketSessionUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerBusiness.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" />
         <option value="$PROJECT_DIR$/src/test/java/PerformerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/AudienceHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceBusiness.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteBusiness.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/LiveTravelnoteController.java" />
       </list>
     </option>
   </component>
@@ -543,8 +630,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -586,7 +671,26 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="niyouji" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="travelnote" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
@@ -605,7 +709,22 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="niyouji" type="462c0819:PsiDirectoryNode" />
               <item name="entrance" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
@@ -625,6 +744,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -638,17 +759,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jeramtough.niyouji.business" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jeramtough.niyouji.bean" />
       <recent name="com.jeramtough.niyouji.component" />
       <recent name="com.jeramtough.niyouji.bean.socket" />
       <recent name="com.jeramtough.niyouji.entrance" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\component\communicate\factory" />
@@ -656,6 +771,12 @@
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\bean\socketmessage\command\performer" />
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\bean\socketmessage\command" />
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\component" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jeramtough.niyouji.business" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -670,7 +791,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.tomcat-8.5.24">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -939,7 +1060,8 @@
       <workItem from="1516163311542" duration="309000" />
       <workItem from="1516163636810" duration="32000" />
       <workItem from="1516163728060" duration="23490000" />
-      <workItem from="1516337572181" duration="9215000" />
+      <workItem from="1516337572181" duration="10061000" />
+      <workItem from="1516431527510" duration="4872000" />
     </task>
     <servers />
   </component>
@@ -976,7 +1098,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91841000" />
+    <option name="totallyTimeSpent" value="97559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -988,6 +1110,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -997,13 +1120,13 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270869" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4020443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3492334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22995462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14674735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1012,7 +1135,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2393888" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1030,35 +1152,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/CommandFactory.java" />
-    <entry file="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/Jtlog3.jar!/com/jeramtough/jtlog3/P1.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.java-websocket/Java-WebSocket/1.3.7/861acf87d4a8ad7cdf66f6055f929ca4303958c2/Java-WebSocket-1.3.7-sources.jar!/org/java_websocket/client/WebSocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="177" column="29" lean-forward="false" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/websocket/BaseWebSocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/TestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1070,7 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,41 +1180,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#Travelnote#0" expanded="false" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="method#setCoverResourceUrl#0;class#Travelnote#0" expanded="false" />
-            <element signature="e#1596#1597#0" expanded="true" />
-            <element signature="e#1625#1626#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1777#1778#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/client/CreatePerformingRoomCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/client/ClientCommandActions.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/SocketMessageFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="48" lean-forward="false" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#299#300#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-185">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,7 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,7 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1154,7 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,47 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#387#388#0" expanded="false" />
-            <element signature="e#431#432#0" expanded="false" />
-            <element signature="e#462#463#0" expanded="false" />
-            <element signature="e#496#497#0" expanded="false" />
-            <element signature="e#518#519#0" expanded="false" />
-            <element signature="e#565#566#0" expanded="false" />
-            <element signature="e#596#597#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#756#757#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#810#811#0" expanded="false" />
-            <element signature="e#855#856#0" expanded="false" />
-            <element signature="e#884#885#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#944#945#0" expanded="false" />
-            <element signature="e#995#996#0" expanded="false" />
-            <element signature="e#1030#1031#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
-          <folding>
-            <element signature="docComment;class#Travelnote#0" expanded="false" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="method#setCoverResourceUrl#0;class#Travelnote#0" expanded="false" />
-            <element signature="e#1596#1597#0" expanded="true" />
-            <element signature="e#1625#1626#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1777#1778#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1210,12 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="32" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,15 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,7 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,12 +1253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1260,15 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,7 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,9 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,7 +1281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,7 +1295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,7 +1302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,9 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1336,38 +1316,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/factory/PerformerSocketMessageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/factory/PerformerSocketMessageFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/AudienceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1375,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="217" column="72" lean-forward="false" selection-start-line="215" selection-start-column="14" selection-end-line="217" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1383,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="123" column="9" lean-forward="false" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1391,7 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1399,33 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-277">
-          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,37 +1359,143 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/AudienceHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="161">
           <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="529">
           <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="52" column="1" lean-forward="false" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <folding>
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3227">
+          <caret line="249" column="9" lean-forward="false" selection-start-line="249" selection-start-column="9" selection-end-line="249" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoomsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="38" column="72" lean-forward="false" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="37" column="93" lean-forward="false" selection-start-line="37" selection-start-column="93" selection-end-line="37" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/LiveTravelnoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

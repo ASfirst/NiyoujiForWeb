@@ -1,7 +1,9 @@
 package com.jeramtough.niyouji.component.performing;
 
 import com.jeramtough.jtlog3.WithLogger;
+import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
+import com.jeramtough.niyouji.util.SocketSessionUtil;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.ArrayList;
@@ -20,10 +22,11 @@ public class PerformingRoom implements WithLogger
 		this.travelnote = travelnote;
 		this.performerSession = performerSession;
 		
-		audienceSessions=new ArrayList<>();
+		audienceSessions = new ArrayList<>();
 		
-		getP().info("The performer"+travelnote.getPerformerId()+" create a performing room " +
-				""+this.hashCode());
+		getP().info(
+				"The performer" + travelnote.getPerformerId() + " create a performing room " +
+						"" + this.hashCode());
 	}
 	
 	public Travelnote getTravelnote()
@@ -35,15 +38,16 @@ public class PerformingRoom implements WithLogger
 	{
 		return performerSession;
 	}
-
+	
 	public void enterAudience(WebSocketSession session)
 	{
 		audienceSessions.add(session);
-		getP().info("A audience enter the performing room "+hashCode());
+		getP().info("A audience enter the performing room " + hashCode());
 	}
 	
 	public ArrayList<WebSocketSession> getAudienceSessions()
 	{
 		return audienceSessions;
 	}
+	
 }

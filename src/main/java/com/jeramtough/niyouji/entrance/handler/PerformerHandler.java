@@ -34,17 +34,14 @@ public class PerformerHandler extends BaseWebSocketHandler
 				break;
 			
 			case PerformerCommandActions.ADDED_PAGE:
-				
 				performerBusiness.travelnoteAddPage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.SELECTED_PAGE:
-				
 				performerBusiness.travelnoteSelectPage(socketMessage);
 				break;
 			
 			case PerformerCommandActions.DELETED_PAGE:
-				
 				performerBusiness.travelnoteDeletePage(socketMessage);
 				break;
 			
