@@ -26,30 +26,31 @@ public class LiveTravelnoteService implements LiveTravelnoteBusiness
 	@Override
 	public LiveTravelnoteCover[] getLiveTravelnoteCovers()
 	{
-		int size=8;
-		List<PerformingRoom> performingRooms=performingRoomsManager.getAllPerformingRooms();
-		if (performingRooms.size()<size)
+		int size = 8;
+		List<PerformingRoom> performingRooms = performingRoomsManager.getAllPerformingRooms();
+		if (performingRooms.size() < size)
 		{
-			size=performingRooms.size();
+			size = performingRooms.size();
 		}
 		
-		LiveTravelnoteCover[] liveTravelnoteCovers=new LiveTravelnoteCover[size];
-		for (int i=0;i<size;i++)
+		LiveTravelnoteCover[] liveTravelnoteCovers = new LiveTravelnoteCover[size];
+		for (int i = 0; i < size; i++)
 		{
-			Travelnote travelnote=performingRooms.get(i).getTravelnote();
-			LiveTravelnoteCover liveTravelnoteCover=new LiveTravelnoteCover();
+			Travelnote travelnote = performingRooms.get(i).getTravelnote();
+			LiveTravelnoteCover liveTravelnoteCover = new LiveTravelnoteCover();
 			
 			liveTravelnoteCover.setAttentionsCount(travelnote.getAttentionsCount());
 			liveTravelnoteCover.setCoverResourceUrl(travelnote.getCoverResourceUrl());
 			liveTravelnoteCover.setCoverType(travelnote.getCoverType());
 			liveTravelnoteCover.setCreateTime(travelnote.getCreateTime());
 			liveTravelnoteCover.setPerformerId(travelnote.getPerformerId());
+			liveTravelnoteCover.setAudiencesCount(performingRooms.get(i).getAudiencesCount());
 			
 			//这部分业务代码未完成哦
 			liveTravelnoteCover.setPerformerNickname("Nickname");
 			liveTravelnoteCover.setTravelnoteTitle(travelnote.getTravelnoteTitle());
 			
-			liveTravelnoteCovers[i]=liveTravelnoteCover;
+			liveTravelnoteCovers[i] = liveTravelnoteCover;
 		}
 		
 		return liveTravelnoteCovers;

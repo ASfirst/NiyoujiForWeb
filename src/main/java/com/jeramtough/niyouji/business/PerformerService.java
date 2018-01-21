@@ -63,7 +63,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnoteAddPage(SocketMessage socketMessage)
+	public void travelnoteAddPage(SocketMessage socketMessage)
 	{
 		AddPageCommand addPageCommand =
 				PerformerCommandParser.parseAddPageCommand(socketMessage);
@@ -86,7 +86,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnoteSelectPage(SocketMessage socketMessage)
+	public void travelnoteSelectPage(SocketMessage socketMessage)
 	{
 		SelectPageCommand selectPageCommand =
 				PerformerCommandParser.parseSelectPageCommand(socketMessage);
@@ -99,7 +99,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnoteDeletePage(SocketMessage socketMessage)
+	public void travelnoteDeletePage(SocketMessage socketMessage)
 	{
 		DeletePageCommand deletePageCommand =
 				PerformerCommandParser.parseDeletePageCommand(socketMessage);
@@ -116,7 +116,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetImage(SocketMessage socketMessage)
+	public void travelnotePageSetImage(SocketMessage socketMessage)
 	{
 		PageSetImageCommand pageSetImageCommand =
 				PerformerCommandParser.parsePageSetImageCommand(socketMessage);
@@ -133,7 +133,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetVideo(SocketMessage socketMessage)
+	public void travelnotePageSetVideo(SocketMessage socketMessage)
 	{
 		PageSetVideoCommand pageSetVideoCommand =
 				PerformerCommandParser.parsePageSetVideoCommand(socketMessage);
@@ -150,7 +150,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageTextChange(SocketMessage socketMessage)
+	public void travelnotePageTextChange(SocketMessage socketMessage)
 	{
 		PageTextChangeCommand pageTextChangeCommand =
 				PerformerCommandParser.parsePageTextChangeCommand(socketMessage);
@@ -172,7 +172,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetTheme(SocketMessage socketMessage)
+	public void travelnotePageSetTheme(SocketMessage socketMessage)
 	{
 		PageSetThemeCommand pageSetThemeCommand =
 				PerformerCommandParser.parsePageSetThemeCommand(socketMessage);
@@ -190,7 +190,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnotePageSetBackgroundMusic(SocketMessage socketMessage)
+	public void travelnotePageSetBackgroundMusic(SocketMessage socketMessage)
 	{
 		PageSetBackgroundMusicCommand pageSetBackgroundMusicCommand =
 				PerformerCommandParser.parsePageSetBackgroundMusicCommand(socketMessage);
@@ -208,7 +208,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void sentPerformerBarrage(SocketMessage socketMessage)
+	public void sentPerformerBarrage(SocketMessage socketMessage)
 	{
 		SendPerformerBarrageCommand sendPerformerBarrageCommand =
 				PerformerCommandParser.parseSendPerformerBarrageCommand(socketMessage);
@@ -233,7 +233,7 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
-	public synchronized void travelnoteEnd(SocketMessage socketMessage)
+	public void travelnoteEnd(SocketMessage socketMessage)
 	{
 		TravelnoteEndCommand travelnoteEndCommand =
 				PerformerCommandParser.parseTravelnoteEndCommand(socketMessage);

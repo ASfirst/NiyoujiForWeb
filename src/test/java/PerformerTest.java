@@ -2,6 +2,7 @@ import com.alibaba.fastjson.JSON;
 import com.jeramtough.jtutil.DateTimeUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.PerformerCommandActions;
+import com.jeramtough.niyouji.bean.socketmessage.command.performer.AddPageCommand;
 import com.jeramtough.niyouji.bean.socketmessage.command.performer.CreatePerformingRoomCommand;
 import websocket.PerformerWebSocketClient;
 
@@ -29,6 +30,17 @@ public class PerformerTest
 				socketMessage.setCommand(JSON.toJSONString(createPerformingRoomCommand));
 				
 				client.sendSocketMessage(socketMessage);
+				
+				AddPageCommand addPageCommand=new AddPageCommand();
+				addPageCommand.setCreateTime(DateTimeUtil.getCurrentDateTime());
+				addPageCommand.setPageType("image");
+				addPageCommand.setPerformerId("1");
+				SocketMessage socketMessage1=new SocketMessage(PerformerCommandActions
+						.ADDED_PAGE);
+				socketMessage1.setCommand(JSON.toJSONString(addPageCommand));
+				client.sendSocketMessage(socketMessage1);
+				client.sendSocketMessage(socketMessage1);
+				client.sendSocketMessage(socketMessage1);
 			}
 			catch (InterruptedException e)
 			{
