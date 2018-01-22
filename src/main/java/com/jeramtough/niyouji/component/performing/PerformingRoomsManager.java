@@ -32,13 +32,22 @@ public class PerformingRoomsManager
 	
 	public List<PerformingRoom> getAllPerformingRooms()
 	{
-		ArrayList<PerformingRoom> performingRoomArrayList=new ArrayList<>();
+		ArrayList<PerformingRoom> performingRoomArrayList = new ArrayList<>();
 		
-		for (Map.Entry<String, PerformingRoom> performingRoomEntry:performingRooms.entrySet())
+		for (Map.Entry<String, PerformingRoom> performingRoomEntry : performingRooms
+				.entrySet())
 		{
-			performingRoomArrayList.add(performingRoomEntry.getValue());
+			if (performingRoomEntry.getValue().getPerformerSession().isOpen())
+			{
+				performingRoomArrayList.add(performingRoomEntry.getValue());
+			}
+			else
+			{
+				performingRooms.remove(performingRoomEntry.getKey());
+			}
 		}
 		
 		return performingRoomArrayList;
 	}
+	
 }

@@ -26,7 +26,7 @@ public class LiveTravelnoteService implements LiveTravelnoteBusiness
 	@Override
 	public LiveTravelnoteCover[] getLiveTravelnoteCovers()
 	{
-		int size = 8;
+		int size = 4;
 		List<PerformingRoom> performingRooms = performingRoomsManager.getAllPerformingRooms();
 		if (performingRooms.size() < size)
 		{
