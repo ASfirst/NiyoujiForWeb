@@ -14,8 +14,10 @@ import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
 import com.jeramtough.niyouji.util.SocketSessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketSession;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.SynchronousQueue;
@@ -77,7 +79,6 @@ public class PerformerService implements PerformerBusiness
 		travelnotePage.setTravelnoteId(travelnote.getTravelnoteId());
 		travelnotePage.setCreateTime(addPageCommand.getCreateTime());
 		travelnotePage.setPageType(addPageCommand.getPageType());
-		travelnotePage.setThemePosition(addPageCommand.getThemePosition());
 		
 		travelnote.addTravelnotePage(travelnotePage);
 		
@@ -241,12 +242,21 @@ public class PerformerService implements PerformerBusiness
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(travelnoteEndCommand.getPerformerId());
 		
+		try
+		{
+			performingRoom.getPerformerSession().close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		
 		Travelnote travelnote = performingRoom.getTravelnote();
 		ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
 		
 		for (TravelnotePage travelnotePage : travelnotePages)
 		{
-			P.debug(travelnotePage.toString());
+			//			P.debug(travelnotePage.toString());
 		}
 		
 		//广播主播行为到客户端上

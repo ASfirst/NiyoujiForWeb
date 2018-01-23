@@ -1,5 +1,7 @@
 package com.jeramtough.niyouji.bean.socketmessage.command.performer;
 
+import java.io.Serializable;
+
 /**
  * @author 11718
  *         on 2018  January 17 Wednesday 20:33.
@@ -9,7 +11,6 @@ public class AddPageCommand extends PerformerCommand
 {
 	private String createTime;
 	private String pageType;
-	private int themePosition;
 	
 	public String getCreateTime()
 	{
@@ -30,15 +31,4 @@ public class AddPageCommand extends PerformerCommand
 	{
 		this.pageType = pageType;
 	}
-	
-	public int getThemePosition()
-	{
-		return themePosition;
-	}
-	
-	public void setThemePosition(int themePosition)
-	{
-		this.themePosition = themePosition;
-	}
-	
 }
