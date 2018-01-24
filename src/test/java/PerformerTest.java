@@ -25,21 +25,25 @@ public class PerformerTest
 				createPerformingRoomCommand.setCreateTime(DateTimeUtil.getCurrentDateTime());
 				createPerformingRoomCommand.setPerformerId("1");
 				createPerformingRoomCommand.setTravelnoteTitle("这是测试游记");
-				SocketMessage socketMessage =new SocketMessage(PerformerCommandActions
-						.CREATE_PERFORMING_ROOM);
+				SocketMessage socketMessage =
+						new SocketMessage(PerformerCommandActions.CREATE_PERFORMING_ROOM);
 				socketMessage.setCommand(JSON.toJSONString(createPerformingRoomCommand));
 				
 				client.sendSocketMessage(socketMessage);
 				
-				AddPageCommand addPageCommand=new AddPageCommand();
+				AddPageCommand addPageCommand = new AddPageCommand();
 				addPageCommand.setCreateTime(DateTimeUtil.getCurrentDateTime());
-				addPageCommand.setPageType("image");
+				addPageCommand.setPageType("picture_and_word");
 				addPageCommand.setPerformerId("1");
-				SocketMessage socketMessage1=new SocketMessage(PerformerCommandActions
-						.ADDED_PAGE);
+				SocketMessage socketMessage1 =
+						new SocketMessage(PerformerCommandActions.ADDED_PAGE);
 				socketMessage1.setCommand(JSON.toJSONString(addPageCommand));
 				client.sendSocketMessage(socketMessage1);
 				client.sendSocketMessage(socketMessage1);
+				
+				addPageCommand.setPageType("video");
+				socketMessage1.setCommand(JSON.toJSONString(addPageCommand));
+				
 				client.sendSocketMessage(socketMessage1);
 			}
 			catch (InterruptedException e)

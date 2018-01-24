@@ -33,6 +33,12 @@ public class AudienceHandler extends BaseWebSocketHandler
 			case AudienceCommandActions.ENTER_PERFORMING_ROOM:
 				audienceBusiness.enterPerformingRoom(session, socketMessage);
 				break;
+			case AudienceCommandActions.SEND_AUDIENCE_BARRAGE:
+				audienceBusiness.sendAudienceBarrage(session, socketMessage);
+				break;
+			case AudienceCommandActions.LIGHT_ATTENTION_COUNT:
+				audienceBusiness.sendAudienceBarrage(session, socketMessage);
+				break;
 			default:
 		}
 	}

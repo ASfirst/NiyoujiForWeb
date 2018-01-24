@@ -9,6 +9,10 @@ import org.springframework.web.socket.WebSocketSession;
  */
 public interface AudienceBusiness
 {
-	void enterPerformingRoom(WebSocketSession session,
-			SocketMessage socketMessage);
+	void enterPerformingRoom(WebSocketSession session, SocketMessage socketMessage);
+	
+	void sendAudienceBarrage(WebSocketSession session, SocketMessage socketMessage);
+	
+	void lightAttentionCount(WebSocketSession session, SocketMessage socketMessage);
+	
 }

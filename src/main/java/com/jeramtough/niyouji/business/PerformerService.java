@@ -1,6 +1,5 @@
 package com.jeramtough.niyouji.business;
 
-import com.jeramtough.jtlog3.P;
 import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
@@ -14,7 +13,6 @@ import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
 import com.jeramtough.niyouji.util.SocketSessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.io.IOException;

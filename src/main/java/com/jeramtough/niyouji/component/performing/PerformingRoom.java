@@ -37,12 +37,10 @@ public class PerformingRoom implements WithLogger
 		return performerSession;
 	}
 	
-	public Travelnote enterAudience(WebSocketSession session)
+	public void enterAudience(WebSocketSession session)
 	{
 		audienceSessions.add(session);
 		getP().info("A audience enter the performing room " + hashCode());
-		
-		return travelnote;
 	}
 	
 	public ArrayList<WebSocketSession> getAudienceSessions()
