@@ -7,6 +7,7 @@ import com.jeramtough.niyouji.business.AudienceBusiness;
 import com.jeramtough.niyouji.component.communicate.parser.AudienceCommandParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketSession;
 
 /**
@@ -37,9 +38,18 @@ public class AudienceHandler extends BaseWebSocketHandler
 				audienceBusiness.sendAudienceBarrage(session, socketMessage);
 				break;
 			case AudienceCommandActions.LIGHT_ATTENTION_COUNT:
-				audienceBusiness.sendAudienceBarrage(session, socketMessage);
+				audienceBusiness.lightAttentionCount(session, socketMessage);
 				break;
 			default:
 		}
+	}
+	
+	@Override
+	public void afterConnectionClosed(WebSocketSession session, CloseStatus status)
+			throws Exception
+	{
+		super.afterConnectionClosed(session, status);
+		
+		audienceBusiness.audienceLeave(session);
 	}
 }

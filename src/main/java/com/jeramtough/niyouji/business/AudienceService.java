@@ -3,6 +3,7 @@ package com.jeramtough.niyouji.business;
 import com.alibaba.fastjson.JSON;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
+import com.jeramtough.niyouji.bean.socketmessage.command.audience.AudienceLeaveCommand;
 import com.jeramtough.niyouji.bean.socketmessage.command.audience.EnterPerformingRoomCommand;
 import com.jeramtough.niyouji.bean.socketmessage.command.audience.LightAttentionCountCommand;
 import com.jeramtough.niyouji.bean.socketmessage.command.audience.SendAudienceBarrageCommand;
@@ -43,7 +44,7 @@ public class AudienceService implements AudienceBusiness
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(enterPerformingRoomCommand.getPerformerId());
 		
-		//讲Travelnote实体返回给客户端初始化界面
+		//将Travelnote实体返回给客户端初始化界面
 		Travelnote travelnote = performingRoom.getTravelnote();
 		SocketMessage socketMessage1 =
 				new SocketMessage(ServerCommandActions.RETURN_LIVE_TRAVELNOTE);
@@ -94,6 +95,23 @@ public class AudienceService implements AudienceBusiness
 		//点亮数加一
 		Travelnote travelnote = performingRoom.getTravelnote();
 		travelnote.setAttentionsCount(travelnote.getAttentionsCount() + 1);
+		
+		broadcastActionToPerformerAndAudiences(performingRoom.getPerformerSession(),
+				performingRoom.getAudienceSessions(), socketMessage);
+	}
+	
+	@Override
+	public void audienceLeave(WebSocketSession session)
+	{
+		PerformingRoom performingRoom = performingRoomsManager.getPerformingRoom(session);
+		
+		performingRoom.removeAudienceSession(session);
+		
+		//广播
+		AudienceLeaveCommand audienceLeaveCommand = new AudienceLeaveCommand();
+		audienceLeaveCommand.setPerformerId(performingRoom.getTravelnote().getPerformerId());
+		SocketMessage socketMessage = AudienceSocketMessageFactory
+				.processAudienceLeaveCommandSocketMessage(audienceLeaveCommand);
 		
 		broadcastActionToPerformerAndAudiences(performingRoom.getPerformerSession(),
 				performingRoom.getAudienceSessions(), socketMessage);

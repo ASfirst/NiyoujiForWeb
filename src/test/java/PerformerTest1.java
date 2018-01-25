@@ -9,7 +9,7 @@ import com.jeramtough.niyouji.bean.socketmessage.command.performer.PerformerReba
 import com.jeramtough.niyouji.component.communicate.factory.PerformerSocketMessageFactory;
 import websocket.PerformerWebSocketClient;
 
-public class PerformerTest
+public class PerformerTest1
 {
 	
 	private static PerformerWebSocketClient client = null;
@@ -22,7 +22,7 @@ public class PerformerTest
 			try
 			{
 				client.connectBlocking();
-				test1();
+				test2();
 			}
 			catch (InterruptedException e)
 			{

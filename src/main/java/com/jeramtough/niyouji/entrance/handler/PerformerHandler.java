@@ -7,6 +7,7 @@ import com.jeramtough.niyouji.business.PerformerBusiness;
 import com.jeramtough.niyouji.component.communicate.parser.PerformerCommandParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketSession;
 
 /**
@@ -75,5 +76,14 @@ public class PerformerHandler extends BaseWebSocketHandler
 			
 			default:
 		}
+	}
+	
+	@Override
+	public void afterConnectionClosed(WebSocketSession session, CloseStatus status)
+			throws Exception
+	{
+		super.afterConnectionClosed(session, status);
+		
+		performerBusiness.performerLeave(session);
 	}
 }

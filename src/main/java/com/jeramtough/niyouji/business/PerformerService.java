@@ -1,5 +1,7 @@
 package com.jeramtough.niyouji.business;
 
+import com.alibaba.fastjson.JSON;
+import com.jeramtough.jtlog3.P;
 import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
@@ -7,6 +9,7 @@ import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
 import com.jeramtough.niyouji.bean.travelnote.Barrage;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
+import com.jeramtough.niyouji.component.communicate.factory.PerformerSocketMessageFactory;
 import com.jeramtough.niyouji.component.communicate.parser.PerformerCommandParser;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
@@ -26,15 +29,11 @@ import java.util.concurrent.TimeUnit;
 public class PerformerService implements PerformerBusiness
 {
 	private PerformingRoomsManager performingRoomsManager;
-	private ExecutorService executorService;
 	
 	@Autowired
 	public PerformerService(PerformingRoomsManager performingRoomsManager)
 	{
 		this.performingRoomsManager = performingRoomsManager;
-		
-		executorService = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS,
-				new SynchronousQueue<Runnable>());
 	}
 	
 	
@@ -54,7 +53,7 @@ public class PerformerService implements PerformerBusiness
 		
 		PerformingRoom performingRoom = new PerformingRoom(travelnote, webSocketSession);
 		performingRoomsManager.addPerformingRoom(createPerformingRoomCommand.getPerformerId(),
-				performingRoom);
+				webSocketSession, performingRoom);
 		
 		//会送以创建房间完成命令给主播
 		SocketMessage socketMessage1 =
@@ -232,6 +231,43 @@ public class PerformerService implements PerformerBusiness
 	}
 	
 	@Override
+	public void performerLeave(WebSocketSession session)
+	{
+		PerformingRoom performingRoom = performingRoomsManager.getPerformingRoom(session);
+		if (performingRoom != null)
+		{
+			PerformerLeaveCommand performerLeaveCommand = new PerformerLeaveCommand();
+			SocketMessage socketMessage = PerformerSocketMessageFactory
+					.processPerformerLeaveCommandSocketMessage(performerLeaveCommand);
+			
+			SocketSessionUtil
+					.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
+		}
+	}
+	
+	
+	@Override
+	public void performerReback(WebSocketSession session, SocketMessage socketMessage)
+	{
+		PerformerRebackCommand performerRebackCommand =
+				PerformerCommandParser.parsePerformerRebackCommand(socketMessage);
+		
+		PerformingRoom performingRoom = performingRoomsManager
+				.getPerformingRoom(performerRebackCommand.getPerformerId());
+		
+		performingRoom.setPerformerSession(session);
+		
+		performingRoomsManager.updatePerformingRoom(session, performingRoom);
+		
+		//将Travelnote实体返回给客户端初始化界面
+		Travelnote travelnote = performingRoom.getTravelnote();
+		SocketMessage socketMessage1 =
+				new SocketMessage(ServerCommandActions.RETURN_LIVE_TRAVELNOTE);
+		socketMessage1.setCommand(JSON.toJSONString(travelnote));
+		SocketSessionUtil.sendSocketMessage(session, socketMessage1);
+	}
+	
+	@Override
 	public void travelnoteEnd(SocketMessage socketMessage)
 	{
 		TravelnoteEndCommand travelnoteEndCommand =
@@ -249,6 +285,9 @@ public class PerformerService implements PerformerBusiness
 			e.printStackTrace();
 		}
 		
+		performingRoomsManager.removePerformingRoom(performingRoom);
+		
+		//游记加载到服务器
 		Travelnote travelnote = performingRoom.getTravelnote();
 		ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
 		
@@ -266,18 +305,7 @@ public class PerformerService implements PerformerBusiness
 	private void broadcastPerformerCommandToAndiences(PerformingRoom performingRoom,
 			SocketMessage socketMessage)
 	{
-		for (int i = 0; i < performingRoom.getAudienceSessions().size(); i++)
-		{
-			int finalI = i;
-			executorService.submit(() ->
-			{
-				WebSocketSession audienceSession =
-						performingRoom.getAudienceSessions().get(finalI);
-				if (audienceSession.isOpen())
-				{
-					SocketSessionUtil.sendSocketMessage(audienceSession, socketMessage);
-				}
-			});
-		}
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 }

@@ -15,4 +15,5 @@ public interface AudienceBusiness
 	
 	void lightAttentionCount(WebSocketSession session, SocketMessage socketMessage);
 	
+	void audienceLeave(WebSocketSession session);
 }

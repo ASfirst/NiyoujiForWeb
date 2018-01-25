@@ -29,5 +29,11 @@ public interface PerformerBusiness
 	
 	void sentPerformerBarrage(SocketMessage socketMessage);
 	
+	void performerLeave(WebSocketSession session);
+	
+	void performerReback(WebSocketSession session, SocketMessage socketMessage);
+	
 	void travelnoteEnd(SocketMessage socketMessage);
+	
+	
 }

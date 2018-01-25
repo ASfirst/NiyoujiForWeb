@@ -5,6 +5,8 @@ import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author 11718
@@ -43,13 +45,23 @@ public class PerformingRoom implements WithLogger
 		getP().info("A audience enter the performing room " + hashCode());
 	}
 	
-	public ArrayList<WebSocketSession> getAudienceSessions()
+	public List<WebSocketSession> getAudienceSessions()
 	{
 		return audienceSessions;
+	}
+	
+	public void setPerformerSession(WebSocketSession performerSession)
+	{
+		this.performerSession = performerSession;
 	}
 	
 	public int getAudiencesCount()
 	{
 		return audienceSessions.size();
+	}
+	
+	public void removeAudienceSession(WebSocketSession session)
+	{
+		audienceSessions.remove(session);
 	}
 }
