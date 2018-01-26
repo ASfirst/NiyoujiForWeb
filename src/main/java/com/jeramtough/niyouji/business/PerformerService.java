@@ -240,6 +240,16 @@ public class PerformerService implements PerformerBusiness
 			SocketMessage socketMessage = PerformerSocketMessageFactory
 					.processPerformerLeaveCommandSocketMessage(performerLeaveCommand);
 			
+			//延迟10秒发送主播断开连接事件，为了和主播主动结束游记区分
+			try
+			{
+				Thread.sleep(10*1000);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+			
 			SocketSessionUtil
 					.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 		}
@@ -284,10 +294,9 @@ public class PerformerService implements PerformerBusiness
 		{
 			e.printStackTrace();
 		}
-		
 		performingRoomsManager.removePerformingRoom(performingRoom);
 		
-		//游记加载到服务器
+		//游记写入持久层
 		Travelnote travelnote = performingRoom.getTravelnote();
 		ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
 		
@@ -296,6 +305,7 @@ public class PerformerService implements PerformerBusiness
 			//			P.debug(travelnotePage.toString());
 		}
 		
+		P.debug(socketMessage.getCommandAction());
 		//广播主播行为到客户端上
 		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
 	}

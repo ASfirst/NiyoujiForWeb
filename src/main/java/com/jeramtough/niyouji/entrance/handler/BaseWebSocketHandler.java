@@ -49,6 +49,8 @@ public abstract class BaseWebSocketHandler extends TextWebSocketHandler implemen
 		try
 		{
 			session.sendMessage(new TextMessage(jsonMessage));
+			
+			getP().info("sent a message["+jsonMessage+"] to clients");
 		}
 		catch (IOException e)
 		{

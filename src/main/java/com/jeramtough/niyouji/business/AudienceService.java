@@ -100,19 +100,19 @@ public class AudienceService implements AudienceBusiness
 				performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
+	
 	@Override
-	public void audienceLeave(WebSocketSession session)
+	public void audienceLeave(WebSocketSession audienceSession, SocketMessage socketMessage)
 	{
-		PerformingRoom performingRoom = performingRoomsManager.getPerformingRoom(session);
+		AudienceLeaveCommand audienceLeaveCommand =
+				AudienceCommandParser.parseAudienceLeaveCommand(socketMessage);
 		
-		performingRoom.removeAudienceSession(session);
+		PerformingRoom performingRoom = performingRoomsManager
+				.getPerformingRoom(audienceLeaveCommand.getPerformerId());
+		
+		performingRoom.removeAudienceSession(audienceSession);
 		
 		//广播
-		AudienceLeaveCommand audienceLeaveCommand = new AudienceLeaveCommand();
-		audienceLeaveCommand.setPerformerId(performingRoom.getTravelnote().getPerformerId());
-		SocketMessage socketMessage = AudienceSocketMessageFactory
-				.processAudienceLeaveCommandSocketMessage(audienceLeaveCommand);
-		
 		broadcastActionToPerformerAndAudiences(performingRoom.getPerformerSession(),
 				performingRoom.getAudienceSessions(), socketMessage);
 	}

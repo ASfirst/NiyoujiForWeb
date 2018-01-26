@@ -40,16 +40,10 @@ public class AudienceHandler extends BaseWebSocketHandler
 			case AudienceCommandActions.LIGHT_ATTENTION_COUNT:
 				audienceBusiness.lightAttentionCount(session, socketMessage);
 				break;
+			case AudienceCommandActions.AUDIENCE_LEAVE:
+				audienceBusiness.audienceLeave(session,socketMessage);
+				break;
 			default:
 		}
-	}
-	
-	@Override
-	public void afterConnectionClosed(WebSocketSession session, CloseStatus status)
-			throws Exception
-	{
-		super.afterConnectionClosed(session, status);
-		
-		audienceBusiness.audienceLeave(session);
 	}
 }

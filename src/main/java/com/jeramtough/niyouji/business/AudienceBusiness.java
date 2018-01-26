@@ -1,7 +1,6 @@
 package com.jeramtough.niyouji.business;
 
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
-import com.jeramtough.niyouji.bean.socketmessage.command.audience.EnterPerformingRoomCommand;
 import org.springframework.web.socket.WebSocketSession;
 
 /**
@@ -15,5 +14,5 @@ public interface AudienceBusiness
 	
 	void lightAttentionCount(WebSocketSession session, SocketMessage socketMessage);
 	
-	void audienceLeave(WebSocketSession session);
+	void audienceLeave(WebSocketSession performerId,SocketMessage audienceSession);
 }

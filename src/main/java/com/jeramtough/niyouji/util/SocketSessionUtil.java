@@ -1,6 +1,7 @@
 package com.jeramtough.niyouji.util;
 
 import com.alibaba.fastjson.JSON;
+import com.jeramtough.jtlog3.P;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -40,6 +41,10 @@ public class SocketSessionUtil
 			try
 			{
 				session.sendMessage(new TextMessage(jsonMessage));
+				
+				P.info("WebSocketMessage","sent a message["+jsonMessage+"] to the "+session
+						.getId()
+						+" client");
 			}
 			catch (IOException e)
 			{
