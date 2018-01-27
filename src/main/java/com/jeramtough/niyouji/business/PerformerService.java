@@ -286,6 +286,10 @@ public class PerformerService implements PerformerBusiness
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(travelnoteEndCommand.getPerformerId());
 		
+		//广播主播行为到客户端上
+		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		
+		//关闭主播sessiion
 		try
 		{
 			performingRoom.getPerformerSession().close();
@@ -305,9 +309,7 @@ public class PerformerService implements PerformerBusiness
 			//			P.debug(travelnotePage.toString());
 		}
 		
-		P.debug(socketMessage.getCommandAction());
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		
 	}
 	
 	

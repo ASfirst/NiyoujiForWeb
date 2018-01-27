@@ -22,6 +22,8 @@ public class ConnectTest
 			client.reconnectBlocking();
 			client.closeBlocking();
 			client.reconnectBlocking();
+			client.closeBlocking();
+			client.reconnectBlocking();
 //			client.connectBlocking();
 		}
 		catch (InstantiationException | IllegalAccessException | InterruptedException e)

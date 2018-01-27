@@ -74,13 +74,6 @@ public class PerformerTest
 				.processPageSetVideoSocketMessage(pageSetVideoCommand));
 	}
 	
-	public static void test2()
-	{
-		PerformerRebackCommand performerRebackCommand = new PerformerRebackCommand();
-		performerRebackCommand.setPerformerId("1");
-		
-		client.sendSocketMessage(PerformerSocketMessageFactory
-				.processPerformerRebackCommandSocketMessage(performerRebackCommand));
-	}
+	
 }
 
