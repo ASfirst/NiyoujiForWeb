@@ -6,66 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___com_jeramtough___Niyouji_1_0_war__exploded_.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___com_jeramtough___Niyouji_1_0_war__exploded_.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_web_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_webmvc_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_websocket_5_0_2_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Niyouji_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Niyouji_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Niyouji_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Niyouji_test.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerRebackCommand.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerRebackCommand.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/PerformerService.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/PerformerService.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-aop-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-beans-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-context-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-core-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-expression-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-jcl-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-webmvc-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/lib/spring-websocket-5.0.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/spring-config.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/spring-config.xml" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerRebackCommand.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerRebackCommand.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/PerformerService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/PerformerService.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/AudienceTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ConnectTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/PerformerTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/PerformerTest1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/Test.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/TestWebSocketClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ThreadTest$MyThread.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ThreadTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/websocket/AudienceWebSocketClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/websocket/BaseWebSocketClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/websocket/PerformerWebSocketClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerRebackCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/performer/PerformerRebackCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/LiveTravelnoteService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/TestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/TestController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-test.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback-test.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-config.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websocket/AudienceWebSocketClient.java" afterPath="$PROJECT_DIR$/src/test/java/websocket/AudienceWebSocketClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websocket/BaseWebSocketClient.java" afterPath="$PROJECT_DIR$/src/test/java/websocket/BaseWebSocketClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/websocket/PerformerWebSocketClient.java" afterPath="$PROJECT_DIR$/src/test/java/websocket/PerformerWebSocketClient.java" />
-    </list>
+    <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -1213,7 +1154,7 @@
       <workItem from="1517011000092" duration="10236000" />
       <workItem from="1517125868453" duration="5374000" />
       <workItem from="1517159800336" duration="15693000" />
-      <workItem from="1517238164647" duration="15879000" />
+      <workItem from="1517238164647" duration="16028000" />
     </task>
     <servers />
   </component>
@@ -1250,11 +1191,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225204000" />
+    <option name="totallyTimeSpent" value="225353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1275,7 +1215,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
