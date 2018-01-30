@@ -75,6 +75,10 @@ public class PerformerHandler extends BaseWebSocketHandler
 				performerBusiness.travelnoteEnd(socketMessage);
 				break;
 			
+			case PerformerCommandActions.PERFORMER_REBACK:
+				performerBusiness.performerReback(session, socketMessage);
+				break;
+			
 			default:
 		}
 	}
@@ -85,6 +89,6 @@ public class PerformerHandler extends BaseWebSocketHandler
 	{
 		super.afterConnectionClosed(session, status);
 		
-		performerBusiness.performerLeave(session);
+		//	performerBusiness.performerLeave(session);
 	}
 }

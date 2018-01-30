@@ -1,7 +1,5 @@
 package com.jeramtough.niyouji.business;
 
-import com.alibaba.fastjson.JSON;
-import com.jeramtough.jtlog3.P;
 import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
@@ -13,6 +11,9 @@ import com.jeramtough.niyouji.component.communicate.factory.PerformerSocketMessa
 import com.jeramtough.niyouji.component.communicate.parser.PerformerCommandParser;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
+import com.jeramtough.niyouji.dao.mapper.BarrageMapper;
+import com.jeramtough.niyouji.dao.mapper.TravelnoteMapper;
+import com.jeramtough.niyouji.dao.mapper.TravelnotePageMapper;
 import com.jeramtough.niyouji.util.SocketSessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,20 +21,29 @@ import org.springframework.web.socket.WebSocketSession;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
+/**
+ * @author 11718
+ */
 @Service
 public class PerformerService implements PerformerBusiness
 {
 	private PerformingRoomsManager performingRoomsManager;
 	
+	private TravelnotePageMapper travelnotePageMapper;
+	private TravelnoteMapper travelnoteMapper;
+	private BarrageMapper barrageMapper;
+	
 	@Autowired
-	public PerformerService(PerformingRoomsManager performingRoomsManager)
+	public PerformerService(PerformingRoomsManager performingRoomsManager,
+			TravelnotePageMapper travelnotePageMapper, TravelnoteMapper travelnoteMapper,
+			BarrageMapper barrageMapper)
 	{
 		this.performingRoomsManager = performingRoomsManager;
+		this.travelnotePageMapper = travelnotePageMapper;
+		this.travelnoteMapper = travelnoteMapper;
+		this.barrageMapper = barrageMapper;
 	}
 	
 	
@@ -79,8 +89,9 @@ public class PerformerService implements PerformerBusiness
 		
 		travelnote.addTravelnotePage(travelnotePage);
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -92,8 +103,9 @@ public class PerformerService implements PerformerBusiness
 		PerformingRoom performingRoom =
 				performingRoomsManager.getPerformingRoom(selectPageCommand.getPerformerId());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -109,8 +121,9 @@ public class PerformerService implements PerformerBusiness
 		
 		travelnote.deleteTravelnotePage(deletePageCommand.getPosition());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -126,8 +139,9 @@ public class PerformerService implements PerformerBusiness
 				travelnote.getTravelnotePage(pageSetImageCommand.getPosition());
 		travelnotePage.setResourceUrl(pageSetImageCommand.getImageUrl());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -143,8 +157,9 @@ public class PerformerService implements PerformerBusiness
 				travelnote.getTravelnotePage(pageSetVideoCommand.getPosition());
 		travelnotePage.setResourceUrl(pageSetVideoCommand.getVideoUrl());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -165,8 +180,9 @@ public class PerformerService implements PerformerBusiness
 				pageTextChangeCommand.getStart(), pageTextChangeCommand.getWords());
 		travelnotePage.setTextContent(textContent);
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -183,8 +199,9 @@ public class PerformerService implements PerformerBusiness
 		
 		travelnotePage.setThemePosition(pageSetThemeCommand.getThemePosition());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -201,8 +218,9 @@ public class PerformerService implements PerformerBusiness
 				travelnote.getTravelnotePage(pageSetBackgroundMusicCommand.getPosition());
 		travelnotePage.setBackgroundMusicPath(pageSetBackgroundMusicCommand.getMusicPath());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -226,8 +244,9 @@ public class PerformerService implements PerformerBusiness
 		
 		travelnotePage.addBarrage(barrage);
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -243,7 +262,7 @@ public class PerformerService implements PerformerBusiness
 			//延迟10秒发送主播断开连接事件，为了和主播主动结束游记区分
 			try
 			{
-				Thread.sleep(10*1000);
+				Thread.sleep(10 * 1000);
 			}
 			catch (InterruptedException e)
 			{
@@ -269,12 +288,17 @@ public class PerformerService implements PerformerBusiness
 		
 		performingRoomsManager.updatePerformingRoom(session, performingRoom);
 		
-		//将Travelnote实体返回给客户端初始化界面
+		//当前观众数和双击数
 		Travelnote travelnote = performingRoom.getTravelnote();
-		SocketMessage socketMessage1 =
-				new SocketMessage(ServerCommandActions.RETURN_LIVE_TRAVELNOTE);
-		socketMessage1.setCommand(JSON.toJSONString(travelnote));
-		SocketSessionUtil.sendSocketMessage(session, socketMessage1);
+		performerRebackCommand.setAttentionsCount(travelnote.getAttentionsCount());
+		performerRebackCommand.setAudiencesCount(performingRoom.getAudiencesCount());
+		socketMessage = PerformerSocketMessageFactory
+				.processPerformerRebackCommandSocketMessage(performerRebackCommand);
+		
+		//将主播重连广播到观众端和主播端上
+		SocketSessionUtil.sendSocketMessage(session, socketMessage);
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 	}
 	
 	@Override
@@ -286,8 +310,9 @@ public class PerformerService implements PerformerBusiness
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(travelnoteEndCommand.getPerformerId());
 		
-		//广播主播行为到客户端上
-		broadcastPerformerCommandToAndiences(performingRoom, socketMessage);
+		//广播主播行为到观众端上
+		SocketSessionUtil
+				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
 		
 		//关闭主播sessiion
 		try
@@ -302,22 +327,18 @@ public class PerformerService implements PerformerBusiness
 		
 		//游记写入持久层
 		Travelnote travelnote = performingRoom.getTravelnote();
-		ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
-		
-		for (TravelnotePage travelnotePage : travelnotePages)
+		if (travelnote.getTravelnotePages().size() > 0)
 		{
-			//			P.debug(travelnotePage.toString());
+			travelnoteMapper.insertTravelnote(travelnote);
+			
+			ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
+			for (TravelnotePage travelnotePage : travelnotePages)
+			{
+			}
 		}
 		
 		
 	}
 	
 	
-	//*******************************
-	private void broadcastPerformerCommandToAndiences(PerformingRoom performingRoom,
-			SocketMessage socketMessage)
-	{
-		SocketSessionUtil
-				.sendSocketMessage(performingRoom.getAudienceSessions(), socketMessage);
-	}
 }

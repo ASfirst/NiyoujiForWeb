@@ -4,6 +4,7 @@ import com.jeramtough.niyouji.bean.travelnote.LiveTravelnoteCover;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
+import com.jeramtough.niyouji.dao.mapper.PrimaryUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,11 +17,14 @@ import java.util.List;
 public class LiveTravelnoteService implements LiveTravelnoteBusiness
 {
 	private PerformingRoomsManager performingRoomsManager;
+	private PrimaryUserMapper primaryUserMapper;
 	
 	@Autowired
-	public LiveTravelnoteService(PerformingRoomsManager performingRoomsManager)
+	public LiveTravelnoteService(PerformingRoomsManager performingRoomsManager,
+			PrimaryUserMapper primaryUserMapper)
 	{
 		this.performingRoomsManager = performingRoomsManager;
+		this.primaryUserMapper = primaryUserMapper;
 	}
 	
 	@Override
@@ -46,8 +50,10 @@ public class LiveTravelnoteService implements LiveTravelnoteBusiness
 			liveTravelnoteCover.setPerformerId(travelnote.getPerformerId());
 			liveTravelnoteCover.setAudiencesCount(performingRooms.get(i).getAudiencesCount());
 			
-			//这部分业务代码未完成哦
-			liveTravelnoteCover.setPerformerNickname("Nickname");
+			//这部分业务代码已完成哦
+			String performerId = travelnote.getPerformerId();
+			String nickname = primaryUserMapper.getUserNickname(performerId);
+			liveTravelnoteCover.setPerformerNickname(nickname);
 			liveTravelnoteCover.setTravelnoteTitle(travelnote.getTravelnoteTitle());
 			
 			liveTravelnoteCovers[i] = liveTravelnoteCover;
