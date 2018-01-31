@@ -52,6 +52,7 @@ public class AudienceService implements AudienceBusiness
 		SocketSessionUtil.sendSocketMessage(session, socketMessage1);
 		
 		//将进入直播间的行为广播到各个，除了进入直播间的用户本身
+		//这里有个bug，用户直接进入，无法得知现在的观众数和点赞数
 		broadcastActionToPerformerAndAudiences(performingRoom.getPerformerSession(),
 				performingRoom.getAudienceSessions(), socketMessage);
 		

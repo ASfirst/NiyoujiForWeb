@@ -62,6 +62,7 @@ public abstract class BaseWebSocketHandler extends TextWebSocketHandler implemen
 	{
 		try
 		{
+			getP().info("pong");
 			session.sendMessage(message);
 		}
 		catch (IOException e)
