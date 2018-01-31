@@ -326,14 +326,29 @@ public class PerformerService implements PerformerBusiness
 		performingRoomsManager.removePerformingRoom(performingRoom);
 		
 		//游记写入持久层
-		Travelnote travelnote = performingRoom.getTravelnote();
-		if (travelnote.getTravelnotePages().size() > 0)
+		synchronized (this)
 		{
-			travelnoteMapper.insertTravelnote(travelnote);
-			
-			ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
-			for (TravelnotePage travelnotePage : travelnotePages)
+			Travelnote travelnote = performingRoom.getTravelnote();
+			if (travelnote.getTravelnotePages().size() > 0)
 			{
+				travelnoteMapper.insertTravelnote(travelnote);
+				int travelnoteId=travelnoteMapper.getLastTravelnoteId();
+				
+				ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
+				for (TravelnotePage travelnotePage : travelnotePages)
+				{
+					travelnotePage.setTravelnoteId(travelnoteId+"");
+					travelnotePageMapper.insertTravelnotePage(travelnotePage);
+					int pageId=travelnotePageMapper.getLastPageId();
+					
+					for (Barrage barrage:travelnotePage.getBarrages())
+					{
+						barrage.setTravelnoteId(travelnoteId+"");
+						barrage.setPageId(pageId+"");
+						
+						barrageMapper.insertBarrage(barrage);
+					}
+				}
 			}
 		}
 		

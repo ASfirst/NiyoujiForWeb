@@ -105,4 +105,8 @@ public class TravelnotePage
 		barrages.add(barrage);
 	}
 	
+	public ArrayList<Barrage> getBarrages()
+	{
+		return barrages;
+	}
 }

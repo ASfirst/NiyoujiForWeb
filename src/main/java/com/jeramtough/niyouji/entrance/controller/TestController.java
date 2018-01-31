@@ -53,7 +53,7 @@ public class TestController
 		Barrage barrage = new Barrage();
 		barrage.setNickname("asdfsa");
 		barrage.setCreateTime(DateTimeUtil.getCurrentDateTime());
-		barrage.setContent("dsfsa");
+		barrage.setContent("\\xF0\\x9F\\x98\\x98\\xF0\\x9F");
 		barrage.setIsPerformers(true);
 		barrage.setPageId("2");
 		barrage.setTravelnoteId("6");
