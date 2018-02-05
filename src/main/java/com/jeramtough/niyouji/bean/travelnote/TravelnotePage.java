@@ -1,14 +1,15 @@
 package com.jeramtough.niyouji.bean.travelnote;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class TravelnotePage
+public class TravelnotePage implements Serializable
 {
 	private String pageId;
 	private String travelnoteId;
 	private String createTime;
 	private String pageType;
-	private int themePosition=0;
+	private int themePosition = 0;
 	private String resourceUrl;
 	private String textContent;
 	private String backgroundMusicPath;

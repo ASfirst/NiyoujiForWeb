@@ -4,8 +4,11 @@ import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
 import com.jeramtough.niyouji.dao.db.DatabaseProperty;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
 
 /**
  * Created by Administrator
@@ -29,4 +32,13 @@ public interface TravelnotePageMapper
 	@Select("SELECT page_id FROM " + DatabaseProperty.TABLE_NAME_2 +
 			" ORDER BY page_id DESC LIMIT 1;")
 	int getLastPageId();
+	
+	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_2 +
+			" WHERE travelnote_id=#{travelnoteId}")
+	ArrayList<TravelnotePage> getPages(String travelnoteId);
+	
+	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_2 +
+			" WHERE travelnote_id=#{travelnoteId} LIMIT #{size}")
+	ArrayList<TravelnotePage> getPagesLimitSize(@Param("travelnoteId") String travelnoteId,
+			@Param("size") int size);
 }

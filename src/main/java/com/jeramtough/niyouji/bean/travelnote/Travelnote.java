@@ -1,13 +1,13 @@
 package com.jeramtough.niyouji.bean.travelnote;
 
-import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * @author 11718
  */
-public class Travelnote
+public class Travelnote implements Serializable
 {
 	private String travelnoteId;
 	private String performerId;

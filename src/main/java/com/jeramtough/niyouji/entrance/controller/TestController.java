@@ -107,4 +107,12 @@ public class TestController
 	{
 		return primaryUserMapper.getUserNickname(userId);
 	}
+	
+	@RequestMapping("/getRowCountByTravelnoteId")
+	@ResponseBody
+	public String getRowCountByTravelnoteId(
+			@RequestParam(value = "travelnoteId", required = true) String travelnoteId)
+	{
+		return travelnoteMapper.getRowCountByTravelnoteId(travelnoteId)+"";
+	}
 }
