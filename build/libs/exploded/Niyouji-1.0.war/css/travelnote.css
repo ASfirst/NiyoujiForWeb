@@ -20,23 +20,15 @@
 #layout3 {
 }
 .travelnote {
-	background-image: url(../images/background.jpg);
-	background-size: cover;
+	background-color: #1114BD;	
 }
 .travelnote .image {
 	position: relative;
-	background-color: #11B6D8;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin-right: -15px;
-	margin-left: -15px;
-}
-.no-gutters {
-	margin-right: 0;
-	margin-left: 0
 }
 .travelnote .image picture {
 }

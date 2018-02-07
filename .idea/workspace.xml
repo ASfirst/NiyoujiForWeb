@@ -6,41 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/bean/travelnote/FinishedTravelnoteCover.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/bean/travelnote/FinishedTravelnoteCover.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/PerformerService.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/PerformerService.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/TravelnoteService.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/business/TravelnoteService.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/dao/db/DatabaseProperty.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/dao/db/DatabaseProperty.class" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/dao/mapper/BarrageMapper.class" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/WEB-INF/classes/com/jeramtough/niyouji/dao/mapper/BarrageMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/bean/travelnote/FinishedTravelnoteCover.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/bean/travelnote/FinishedTravelnoteCover.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/PerformerService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/PerformerService.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/TravelnoteService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/business/TravelnoteService.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/dao/db/DatabaseProperty.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/dao/db/DatabaseProperty.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/dao/mapper/BarrageMapper.class" afterPath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/dao/mapper/BarrageMapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/controller/TestController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/controller/TravelnoteController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/AudienceHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/PerformerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/jeramtough/niyouji/entrance/handler/TestHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/FinishedTravelnoteCover.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/FinishedTravelnoteCover.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/Travelnote.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/TravelnotePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/TravelnotePage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/TravelnoteBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/TravelnoteBusiness.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/TravelnoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/TravelnoteService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/app/init/SpringConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/app/init/SpringConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/db/DatabaseProperty.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/db/DatabaseProperty.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/mapper/BarrageMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/mapper/BarrageMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/mapper/TravelnoteMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/mapper/TravelnoteMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/TestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/controller/TestController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/controller/TravelnoteController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/controller/TravelnoteController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/AudienceHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/handler/AudienceHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/BaseWebSocketHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/handler/BaseWebSocketHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/PerformerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/handler/PerformerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/entrance/handler/TestHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/handler/TestHandler.java" />
-    </list>
+    <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -1163,7 +1129,7 @@
       <workItem from="1517371567528" duration="8131000" />
       <workItem from="1517639996484" duration="8000" />
       <workItem from="1517727398721" duration="3427000" />
-      <workItem from="1517803187372" duration="33646000" />
+      <workItem from="1517803187372" duration="33673000" />
     </task>
     <servers />
   </component>
@@ -1200,7 +1166,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270565000" />
+    <option name="totallyTimeSpent" value="270592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
