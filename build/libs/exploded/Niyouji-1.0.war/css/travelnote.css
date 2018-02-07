@@ -20,7 +20,10 @@
 #layout3 {
 }
 .travelnote {
-	background-color: #1114BD;	
+	background-image: url(../images/pwthemes/2/background.jpg);
+	background-size: cover;
+	position: relative;
+
 }
 .travelnote .image {
 	position: relative;
@@ -31,6 +34,7 @@
 	flex-wrap: wrap;
 }
 .travelnote .image picture {
+	margin: 2%;
 }
 .travelnote .image .frame {
 	position: absolute;

@@ -17,12 +17,15 @@
 	padding-top: 50px;
 	background-color: #31F87F;
 }
-#layout3 {
+#travelnote {
 }
-.travelnote {
-	background-color: #1114BD;	
+.travelnote_page {
+	background-image: url(../images/pwthemes/2/background.jpg);
+	background-size: cover;
+	position: relative;
+
 }
-.travelnote .image {
+.travelnote_page .image {
 	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -30,12 +33,22 @@
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
-.travelnote .image picture {
+.travelnote_page .image picture {
+	margin: 2%;
 }
-.travelnote .image .frame {
+.travelnote_page .image .frame {
 	position: absolute;
 	float: none;
 	width: 96%;
 	height: 100%;
 	left: 2%;
+}
+.container .travelnote_page .trajectory {
+	position: absolute;
+	margin-top: 50px;
+	background-color: #E3E288;
+}
+.trajectory .barrage {
+	position: absolute;
+
 }
