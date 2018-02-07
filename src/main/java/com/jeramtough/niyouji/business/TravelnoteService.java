@@ -1,15 +1,9 @@
 package com.jeramtough.niyouji.business;
 
-import com.jeramtough.jtlog3.P;
-import com.jeramtough.niyouji.bean.travelnote.FinishedTravelnoteCover;
-import com.jeramtough.niyouji.bean.travelnote.LiveTravelnoteCover;
-import com.jeramtough.niyouji.bean.travelnote.Travelnote;
-import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
+import com.jeramtough.niyouji.bean.travelnote.*;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
-import com.jeramtough.niyouji.dao.mapper.PrimaryUserMapper;
-import com.jeramtough.niyouji.dao.mapper.TravelnoteMapper;
-import com.jeramtough.niyouji.dao.mapper.TravelnotePageMapper;
+import com.jeramtough.niyouji.dao.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,16 +20,21 @@ public class TravelnoteService implements TravelnoteBusiness
 	private PrimaryUserMapper primaryUserMapper;
 	private TravelnoteMapper travelnoteMapper;
 	private TravelnotePageMapper travelnotePageMapper;
+	private AppraiseMapper appraiseMapper;
+	private BarrageMapper barrageMapper;
 	
 	@Autowired
 	public TravelnoteService(PerformingRoomsManager performingRoomsManager,
 			PrimaryUserMapper primaryUserMapper, TravelnoteMapper travelnoteMapper,
-			TravelnotePageMapper travelnotePageMapper)
+			TravelnotePageMapper travelnotePageMapper, AppraiseMapper appraiseMapper,
+			BarrageMapper barrageMapper)
 	{
 		this.performingRoomsManager = performingRoomsManager;
 		this.primaryUserMapper = primaryUserMapper;
 		this.travelnoteMapper = travelnoteMapper;
 		this.travelnotePageMapper = travelnotePageMapper;
+		this.appraiseMapper = appraiseMapper;
+		this.barrageMapper = barrageMapper;
 	}
 	
 	@Override
@@ -99,12 +98,15 @@ public class TravelnoteService implements TravelnoteBusiness
 			finishedTravelnoteCover.setPerformerId(travelnote.getPerformerId());
 			finishedTravelnoteCover.setTravelnoteTitle(travelnote.getTravelnoteTitle());
 			
+			finishedTravelnoteCover.setAppraiseCount(appraiseMapper
+					.getAppraisesCountByTravelnoteId(travelnote.getTravelnoteId()));
+			
 			String performerId = travelnote.getPerformerId();
 			String nickname = primaryUserMapper.getUserNickname(performerId);
 			finishedTravelnoteCover.setPerformerNickname(nickname);
 			
 			ArrayList<TravelnotePage> travelnotePages =
-					travelnotePageMapper.getPagesLimitSize(travelnote.getTravelnoteId(),2);
+					travelnotePageMapper.getPagesLimitSize(travelnote.getTravelnoteId(), 2);
 			int pagesSize = travelnotePages.size();
 			finishedTravelnoteCover.setFirstTravelnotePage(travelnotePages.get(0));
 			if (pagesSize > 1)
@@ -116,5 +118,29 @@ public class TravelnoteService implements TravelnoteBusiness
 		}
 		
 		return finishedTravelnoteCovers;
+	}
+	
+	@Override
+	public Travelnote getTravelnote(String travelnoteId)
+	{
+		Travelnote travelnote = travelnoteMapper.getTravelnoteById(travelnoteId);
+		
+		ArrayList<Appraise> appraises =
+				appraiseMapper.getAppraisesByTravelnoteId(travelnoteId);
+		travelnote.setAppraises(appraises);
+		
+		ArrayList<TravelnotePage> travelnotePages =
+				travelnotePageMapper.getPages(travelnoteId);
+		travelnote.setTravelnotePages(travelnotePages);
+		
+		for (TravelnotePage travelnotePage : travelnotePages)
+		{
+			ArrayList<Barrage> barrages = barrageMapper
+					.getBarragesByTravelnoteIdAndPageId(travelnoteId,
+							travelnotePage.getPageId());
+			travelnotePage.setBarrages(barrages);
+		}
+		
+		return travelnote;
 	}
 }

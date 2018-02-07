@@ -21,4 +21,9 @@ public class DatabaseProperty
 	 * barrage_tb
 	 */
 	public final static String TABLE_NAME_3 = DATABASE_NAME_1 + "." + "barrage_tb";
+	
+	/**
+	 * appraise
+	 */
+	public final static String TABLE_NAME_4 = DATABASE_NAME_1 + "." + "appraise_tb";
 }

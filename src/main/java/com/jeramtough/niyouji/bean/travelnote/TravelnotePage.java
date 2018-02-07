@@ -110,4 +110,9 @@ public class TravelnotePage implements Serializable
 	{
 		return barrages;
 	}
+	
+	public void setBarrages(ArrayList<Barrage> barrages)
+	{
+		this.barrages = barrages;
+	}
 }

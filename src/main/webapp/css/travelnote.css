@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main {
+}
+#layout1 {
+	background-color: #C92023;
+	margin-top: 0px;
+	position: absolute;
+	width: 500px;
+}
+#layout1 #action_box {
+	border-bottom: 1px solid #8E8E8E;
+	color: #000000;
+}
+#layout2 {
+	padding-top: 50px;
+	background-color: #31F87F;
+}
+#layout3 {
+}
+.travelnote {
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+}
+.travelnote .image {
+	position: relative;
+	background-color: #11B6D8;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0
+}
+.travelnote .image picture {
+}
+.travelnote .image .frame {
+	position: absolute;
+	float: none;
+	width: 96%;
+	height: 100%;
+	left: 2%;
+}

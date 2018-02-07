@@ -41,4 +41,8 @@ public interface TravelnoteMapper
 			" ORDER BY create_time DESC LIMIT #{rowCount},#{size};")
 	ArrayList<Travelnote> getTravelnotesFromWhere(@Param("rowCount") int rowCount,
 			@Param("size") int size);
+	
+	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_1 +
+			" WHERE travelnote_id=#{travelnoteId};")
+	Travelnote getTravelnoteById(String travelnoteId);
 }

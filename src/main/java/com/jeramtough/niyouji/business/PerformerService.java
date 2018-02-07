@@ -4,6 +4,7 @@ import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
 import com.jeramtough.niyouji.bean.socketmessage.command.performer.*;
+import com.jeramtough.niyouji.bean.travelnote.Appraise;
 import com.jeramtough.niyouji.bean.travelnote.Barrage;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
@@ -11,6 +12,7 @@ import com.jeramtough.niyouji.component.communicate.factory.PerformerSocketMessa
 import com.jeramtough.niyouji.component.communicate.parser.PerformerCommandParser;
 import com.jeramtough.niyouji.component.performing.PerformingRoom;
 import com.jeramtough.niyouji.component.performing.PerformingRoomsManager;
+import com.jeramtough.niyouji.dao.mapper.AppraiseMapper;
 import com.jeramtough.niyouji.dao.mapper.BarrageMapper;
 import com.jeramtough.niyouji.dao.mapper.TravelnoteMapper;
 import com.jeramtough.niyouji.dao.mapper.TravelnotePageMapper;
@@ -21,7 +23,6 @@ import org.springframework.web.socket.WebSocketSession;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.*;
 
 /**
  * @author 11718
@@ -34,16 +35,18 @@ public class PerformerService implements PerformerBusiness
 	private TravelnotePageMapper travelnotePageMapper;
 	private TravelnoteMapper travelnoteMapper;
 	private BarrageMapper barrageMapper;
+	private AppraiseMapper appraiseMapper;
 	
 	@Autowired
 	public PerformerService(PerformingRoomsManager performingRoomsManager,
 			TravelnotePageMapper travelnotePageMapper, TravelnoteMapper travelnoteMapper,
-			BarrageMapper barrageMapper)
+			BarrageMapper barrageMapper, AppraiseMapper appraiseMapper)
 	{
 		this.performingRoomsManager = performingRoomsManager;
 		this.travelnotePageMapper = travelnotePageMapper;
 		this.travelnoteMapper = travelnoteMapper;
 		this.barrageMapper = barrageMapper;
+		this.appraiseMapper = appraiseMapper;
 	}
 	
 	
@@ -347,6 +350,14 @@ public class PerformerService implements PerformerBusiness
 						barrage.setPageId(pageId+"");
 						
 						barrageMapper.insertBarrage(barrage);
+						
+						Appraise appraise=new Appraise();
+						appraise.setTravelnoteId(travelnoteId+"");
+						appraise.setContent(barrage.getContent());
+						appraise.setCreateTime(barrage.getCreateTime());
+						appraise.setNickname(barrage.getNickname());
+						
+						appraiseMapper.insertAppraise(appraise);
 					}
 				}
 			}

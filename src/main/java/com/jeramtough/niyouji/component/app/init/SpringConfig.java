@@ -1,6 +1,6 @@
 package com.jeramtough.niyouji.component.app.init;
 
-import com.jeramtough.niyouji.entrance.handler.TestHandler;
+import com.jeramtough.niyouji.action.handler.TestHandler;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
