@@ -7,20 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/travelnote.css" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/travelnote.css" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/images/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/images/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/travelnote.js" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/travelnote.js" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/travelnote.html" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/travelnote.html" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/_notes/dwsync.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/css/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/travelnote.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/travelnote.css" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/js/_notes/dwsync.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/travelnote.html" afterPath="$PROJECT_DIR$/src/main/webapp/travelnote.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -130,8 +120,8 @@
       <file leaf-file-name="travelnote.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/travelnote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="137">
+              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -1181,7 +1171,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272228000" />
+    <option name="totallyTimeSpent" value="272257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1398,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
           <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,7 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1486,7 +1474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1582,14 +1569,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-138">
           <caret line="12" column="63" lean-forward="true" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/travelnote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="137">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding />
         </state>
       </provider>

@@ -35,7 +35,7 @@
 .travelnote_page.page_theme3 {
 	background-image: url(../images/pwthemes/3/background.jpg);
 }
-S .travelnote_page.page_theme4 {
+.travelnote_page.page_theme4 {
 	background-image: url(../images/pwthemes/4/background.jpg);
 }
 .travelnote_page .image {
@@ -99,7 +99,8 @@ S .travelnote_page.page_theme4 {
 	font-weight: bold;
 }
 .travelnote_page .page_content {
-	margin-bottom: 15px;
+	padding-bottom: 2%;
+	padding-top: 1%;
 }
 .travelnote_page .page_content.page_theme0 {
 	color: #000000

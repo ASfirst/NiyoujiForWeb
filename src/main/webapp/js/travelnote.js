@@ -30,7 +30,6 @@ const Model = {
     travelnoteHandler: {
         travelnote: null,
         obtainingTravelnote: function (travelnoteId) {
-            console.info(travelnoteId);
             if (travelnoteId == null) {
                 travelnoteId = 1;
             }
