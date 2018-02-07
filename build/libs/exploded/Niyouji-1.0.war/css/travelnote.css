@@ -17,15 +17,15 @@
 	padding-top: 50px;
 	background-color: #31F87F;
 }
-#layout3 {
+#travelnote {
 }
-.travelnote {
+.travelnote_page {
 	background-image: url(../images/pwthemes/2/background.jpg);
 	background-size: cover;
 	position: relative;
 
 }
-.travelnote .image {
+.travelnote_page .image {
 	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -33,13 +33,35 @@
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
-.travelnote .image picture {
+.travelnote_page .image picture {
 	margin: 2%;
 }
-.travelnote .image .frame {
+.travelnote_page .image .frame {
 	position: absolute;
 	float: none;
 	width: 96%;
 	height: 100%;
 	left: 2%;
+}
+.container .travelnote_page .trajectory {
+	position: absolute;
+	background-color: #E3E288;
+	margin-top: 5%;
+	opacity: 1;
+	z-index: 3;
+	float: left;
+}
+.trajectory .barrage {
+	position: absolute;
+	background-color: #09EF31;
+	padding-left: 5px;
+	border-radius: 5px;
+	border: 2px solid #74ABF7;
+	padding-right: 5px;
+	font-size: small;
+
+}
+.barrage .nickname {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #0A760F;
 }
