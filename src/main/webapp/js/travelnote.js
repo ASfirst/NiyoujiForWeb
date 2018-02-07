@@ -16,6 +16,7 @@ const Init = {
             var travelnoteId = RequestParametersUtil.getParameter("travelnoteId");
             Model.travelnoteHandler.obtainingTravelnote(travelnoteId);
         }
+
     }
 ;
 
@@ -29,6 +30,10 @@ const Model = {
     travelnoteHandler: {
         travelnote: null,
         obtainingTravelnote: function (travelnoteId) {
+            console.info(travelnoteId);
+            if (travelnoteId == null) {
+                travelnoteId = 1;
+            }
             var url = "getTravelnote.do?travelnoteId=" + travelnoteId;
             $.get(url, function (data, status) {
                 if (status === "success") {
@@ -39,6 +44,4 @@ const Model = {
     }
 };
 
-const View = {
-
-};
+const View = {};

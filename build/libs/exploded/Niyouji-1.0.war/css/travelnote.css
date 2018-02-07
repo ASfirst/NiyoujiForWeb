@@ -4,7 +4,7 @@
 .main {
 }
 #layout1 {
-	background-color: #C92023;
+	background-color: #FFFFFF;
 	margin-top: 0px;
 	position: absolute;
 	width: 500px;
@@ -15,14 +15,28 @@
 }
 #layout2 {
 	padding-top: 50px;
-	background-color: #31F87F;
+	background-color: #FFFFFF;
 }
 #travelnote {
 }
 .travelnote_page {
-	background-image: url(../images/pwthemes/2/background.jpg);
 	background-size: cover;
 	position: relative;
+}
+.travelnote_page.page_theme0 {
+	background-image: url(../images/pwthemes/0/background.jpg);
+}
+.travelnote_page.page_theme1 {
+	background-image: url(../images/pwthemes/1/background.jpg);
+}
+.travelnote_page.page_theme2 {
+	background-image: url(../images/pwthemes/2/background.jpg);
+}
+.travelnote_page.page_theme3 {
+	background-image: url(../images/pwthemes/3/background.jpg);
+}
+S .travelnote_page.page_theme4 {
+	background-image: url(../images/pwthemes/4/background.jpg);
 }
 .travelnote_page .image {
 	position: relative;
@@ -79,9 +93,26 @@
 	background-repeat: no-repeat;
 	margin-right: 4px;
 }
-
 .barrage2 .content {
 	color: #197702;
 	text-shadow: 1px 1px 3px #FFFFFF;
 	font-weight: bold;
+}
+.travelnote_page .page_content {
+	margin-bottom: 15px;
+}
+.travelnote_page .page_content.page_theme0 {
+	color: #000000
+}
+.travelnote_page .page_content.page_theme1 {
+	color: #dbfc96
+}
+.travelnote_page .page_content.page_theme2 {
+	color: #fbfc96;
+}
+.travelnote_page .page_content.page_theme3 {
+	color: #B5FBFF
+}
+.travelnote_page .page_content.page_theme4 {
+	color: #FFFFFF
 }
