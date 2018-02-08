@@ -10,16 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/_notes/dwsync.xml" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/travelnote.css" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/travelnote.css" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/travelnote.js" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/travelnote.js" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/travelnote.html" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/travelnote.html" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/_notes/dwsync.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/css/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/travelnote.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/travelnote.css" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/js/_notes/dwsync.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/travelnote.html" afterPath="$PROJECT_DIR$/src/main/webapp/travelnote.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -87,8 +82,8 @@
       <file leaf-file-name="TravelnotePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/TravelnotePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="138">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="27" />
               <folding>
                 <element signature="e#1922#1923#0" expanded="true" />
                 <element signature="e#1953#1954#0" expanded="true" />
@@ -120,8 +115,18 @@
       <file leaf-file-name="travelnote.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/travelnote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="68" column="67" lean-forward="true" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+            <state relative-caret-position="213">
+              <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/temp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="102" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -499,7 +504,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/factory/AudienceSocketMessageFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/communicate/parser/AudienceCommandParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/component/performing/PerformingRoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/AudienceBusiness.java" />
@@ -549,6 +553,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/TravelnotePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/TravelnoteService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/RequetParameters.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/temp.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" />
       </list>
     </option>
@@ -1192,7 +1197,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279991000" />
+    <option name="totallyTimeSpent" value="280172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1246,13 +1251,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/action/handler/PerformerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/business/PerformerBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
@@ -1536,7 +1534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1489">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,8 +1547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/travelnote/TravelnotePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="138">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="e#1922#1923#0" expanded="true" />
             <element signature="e#1953#1954#0" expanded="true" />
@@ -1559,10 +1556,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/temp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="102" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/travelnote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="68" column="67" lean-forward="true" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+        <state relative-caret-position="213">
+          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
           <folding />
         </state>
       </provider>

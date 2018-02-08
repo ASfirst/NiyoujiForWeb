@@ -21,6 +21,7 @@ const Init = {
                 receivedTravelnote.travelnotePages.forEach(function (value) {
                     View.travelnoteView.addPage(value);
                 });
+                View.travelnoteView.hideTemplatePage();
 
             });
         }
@@ -63,10 +64,38 @@ const View = {
         },
         addPage: function (travelnotePage) {
             var $newTravelnotePage = $("#travelnote_page_template").clone();
+
+            //set text content and time.
             var textContent = travelnotePage.createTime.substring(10, 16)
-                + (travelnotePage.textContent==null?"":"<br>"+travelnotePage.textContent);
+                + (travelnotePage.textContent == null ? "" : "<br>" + travelnotePage.textContent);
             $newTravelnotePage.find(".page_content").html(textContent);
+
+            //set resource
+            if (travelnotePage.pageType === "picture_and_word") {
+                $newTravelnotePage.find(".image picture source")
+                    .attr("srcset", travelnotePage.resourceUrl);
+                $newTravelnotePage.find(".image picture img")
+                    .attr("src", travelnotePage.resourceUrl);
+            }
+
+            //set theme
+            if (travelnotePage.pageType === "picture_and_word") {
+                $newTravelnotePage.removeClass();
+                $newTravelnotePage.addClass("row travelnote_page page_theme"
+                    + travelnotePage.themePosition);
+                $newTravelnotePage.find(".image .frame").attr("src", "images/pwthemes/"
+                    + travelnotePage.themePosition + "/frame.png");
+                var $travelnotePageTextElement = $newTravelnotePage.find(".page_content");
+                $travelnotePageTextElement.removeClass();
+                $travelnotePageTextElement.addClass("col-12 page_content page_theme"
+                    + travelnotePage.themePosition);
+            }
+
+            //add page into the container element.
             $("#travelnote .container").append($newTravelnotePage);
+        },
+        hideTemplatePage: function () {
+            $("#travelnote_page_template").hide();
         }
 
     }

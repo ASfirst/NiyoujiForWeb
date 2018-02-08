@@ -9,7 +9,7 @@ $(document).ready(function () {
 const Init = {
         initLayout1Width: function () {
             var usedWidth = $(window).width();
-            $("#layout1").css("width", usedWidth + "px");
+            //$("#layout1 #action_box").css("width", usedWidth + "px");
         }
         ,
         initTravelnote: function () {
@@ -31,7 +31,11 @@ const Init = {
 
 const Controller = {
     bindListener: function () {
-
+        $(document).scroll(function () {
+            var y = document.body.scrollTop;
+            $("#layout1 #action_box").css("top", y + "px");
+            //alert("aa");
+        });
     }
 };
 
