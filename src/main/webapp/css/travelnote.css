@@ -119,3 +119,9 @@
 .travelnote_page .page_content.page_theme4 {
 	color: #FFFFFF
 }
+#travelnote_page_template .video video {
+	padding: 0px;
+	margin: 0px
+		;
+	background-color: #145F0E;
+}

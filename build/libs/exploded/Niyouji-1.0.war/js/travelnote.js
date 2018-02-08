@@ -75,6 +75,14 @@ const View = {
                     .attr("srcset", travelnotePage.resourceUrl);
                 $newTravelnotePage.find(".image picture img")
                     .attr("src", travelnotePage.resourceUrl);
+
+                $newTravelnotePage.find(".video").hide();
+            }
+            else {
+                var usedWidth = $(window).width();
+                $newTravelnotePage.find(".video video").attr("width",usedWidth);
+                $newTravelnotePage.find(".video video").attr("src", travelnotePage.resourceUrl);
+                $newTravelnotePage.find(".image").hide();
             }
 
             //set theme

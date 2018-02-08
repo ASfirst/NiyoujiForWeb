@@ -80,8 +80,8 @@ const View = {
             }
             else {
                 var usedWidth = $(window).width();
-                $newTravelnotePage.find(".video video").attr("width",usedWidth);
-                $newTravelnotePage.find(".video video").attr("src", travelnotePage.resourceUrl);
+                //$newTravelnotePage.find(".video video").attr("width",usedWidth);
+                //$newTravelnotePage.find(".video video").attr("src", travelnotePage.resourceUrl);
                 $newTravelnotePage.find(".image").hide();
             }
 
