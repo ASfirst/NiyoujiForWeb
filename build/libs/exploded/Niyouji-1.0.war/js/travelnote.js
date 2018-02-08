@@ -31,7 +31,6 @@ const Init = {
 
 const Controller = {
     bindListener: function () {
-
     }
 };
 
@@ -91,6 +90,11 @@ const View = {
                     + travelnotePage.themePosition);
             }
 
+            //add barrages
+            travelnotePage.barrages.forEach(function (value) {
+                View.barrageView.displayBarrage($newTravelnotePage, value);
+            });
+
             //add page into the container element.
             $("#travelnote .container").append($newTravelnotePage);
         },
@@ -98,5 +102,19 @@ const View = {
             $("#travelnote_page_template").hide();
         }
 
+    },
+
+    barrageView: {
+        displayBarrage: function ($newTravelnotePage, barrage) {
+            var $trajectory = $newTravelnotePage.find(".trajectory");
+            var $newBarrage = $("<div class='barrage1'><span class='nickname'>Jt</span><span class='content'>hehe</span></div>");
+            $newBarrage.find(".nickname").html(barrage.nickname + " : ");
+            $newBarrage.find(".content").html(barrage.content);
+            $trajectory.append($newBarrage);
+
+            $newBarrage.animate({left:'250px'}, 3000, function () {
+                
+            });
+        }
     }
 };

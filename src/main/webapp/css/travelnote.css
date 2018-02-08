@@ -6,8 +6,9 @@
 #layout1 {
 	background-color: #FFFFFF;
 	margin-top: 0px;
-	position: absolute;
+	position: fixed;
 	width: 500px;
+	z-index: 10;
 }
 #layout1 #action_box {
 	border-bottom: 1px solid #8E8E8E;
@@ -22,6 +23,7 @@
 .travelnote_page {
 	background-size: cover;
 	position: relative;
+	overflow-y: hidden;
 }
 .travelnote_page.page_theme0 {
 	background-image: url(../images/pwthemes/0/background.jpg);
@@ -63,6 +65,7 @@
 	z-index: 3;
 	float: left;
 }
+
 .trajectory .barrage1 {
 	position: absolute;
 	background-color: #FFFFFF;
@@ -73,7 +76,7 @@
 	font-size: small;
 }
 .barrage1 .nickname {
-	color: #FFFFFF;
+	color: #909090;
 	text-shadow: 1px 1px 1px #0A760F;
 }
 .trajectory .barrage2 {
