@@ -91,8 +91,12 @@ const View = {
             }
 
             //add barrages
+            var delayTime = 0;
             travelnotePage.barrages.forEach(function (value) {
-                View.barrageView.displayBarrage($newTravelnotePage, value);
+                setTimeout(function () {
+                    View.barrageView.addBarrage($newTravelnotePage, value);
+                }, delayTime);
+                delayTime = delayTime + 3000;
             });
 
             //add page into the container element.
@@ -105,15 +109,29 @@ const View = {
     },
 
     barrageView: {
-        displayBarrage: function ($newTravelnotePage, barrage) {
+        addBarrage: function ($newTravelnotePage, barrage) {
             var $trajectory = $newTravelnotePage.find(".trajectory");
-            var $newBarrage = $("<div class='barrage1'><span class='nickname'>Jt</span><span class='content'>hehe</span></div>");
-            $newBarrage.find(".nickname").html(barrage.nickname + " : ");
+
+            var $newBarrage = $("<div><span class='nickname'>Jt</span><span class='content'>hehe</span></div>");
+            if (barrage.isPerformers) {
+                $newBarrage.addClass("barrage2");
+                $newBarrage.find(".nickname").html("主播 : ");
+            }
+            else {
+                $newBarrage.addClass("barrage1");
+                $newBarrage.find(".nickname").html(barrage.nickname + " : ");
+            }
+
             $newBarrage.find(".content").html(barrage.content);
             $trajectory.append($newBarrage);
 
-            $newBarrage.animate({left:'250px'}, 3000, function () {
-                
+            this.displayBarrage($newBarrage);
+        }
+        ,
+        displayBarrage: function ($barrage) {
+            $barrage.css("right", "-50%");
+            $barrage.animate({right: '120%'}, 12000, function () {
+                View.barrageView.displayBarrage($barrage);
             });
         }
     }

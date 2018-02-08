@@ -23,7 +23,6 @@
 .travelnote_page {
 	background-size: cover;
 	position: relative;
-	overflow-y: hidden;
 }
 .travelnote_page.page_theme0 {
 	background-image: url(../images/pwthemes/0/background.jpg);
@@ -60,24 +59,24 @@
 }
 .container .travelnote_page .trajectory {
 	position: absolute;
-	margin-top: 5%;
 	opacity: 1;
 	z-index: 3;
 	float: left;
+	padding-top: 10%;
+	padding-bottom: 25%;
+	overflow-y: hidden;
 }
-
 .trajectory .barrage1 {
-	position: absolute;
 	background-color: #FFFFFF;
 	padding-left: 5px;
 	border-radius: 5px;
 	border: 2px solid #14CF18;
 	padding-right: 5px;
 	font-size: small;
+	position: absolute;
 }
 .barrage1 .nickname {
-	color: #909090;
-	text-shadow: 1px 1px 1px #0A760F;
+	color: #000000;
 }
 .trajectory .barrage2 {
 	position: absolute;
@@ -90,11 +89,11 @@
 	border-bottom: 1px solid #FFFFFF;
 }
 .barrage2 .nickname {
-	color: #3B3B3B;
-	background-image: url(../images/performer_barrage.png);
+	color: #EBEBEB;
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 4px;
+	text-shadow: 1px 1px 1px #000000;
 }
 .barrage2 .content {
 	color: #197702;

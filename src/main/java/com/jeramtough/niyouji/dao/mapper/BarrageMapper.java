@@ -27,7 +27,7 @@ public interface BarrageMapper
 	int getBarrageCountByTravelnoteId(String travelnoteId);
 	
 	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_3 + " WHERE " +
-			"travelnote_id=#{travelnoteId} AND page_id=#{pageId}")
+			"travelnote_id=#{travelnoteId} AND page_id=#{pageId} ORDER BY create_time")
 	ArrayList<Barrage> getBarragesByTravelnoteIdAndPageId(
 			@Param("travelnoteId") String travelnoteId, @Param("pageId") String pageId);
 }

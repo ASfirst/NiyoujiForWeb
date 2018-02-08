@@ -25,6 +25,6 @@ public interface AppraiseMapper
 	int getAppraisesCountByTravelnoteId(String travelnoteId);
 	
 	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_4 +
-			" WHERE travelnote_id=#{travelnoteId}")
+			" WHERE travelnote_id=#{travelnoteId} ORDER BY create_time")
 	ArrayList<Appraise> getAppraisesByTravelnoteId(String travelnoteId);
 }
