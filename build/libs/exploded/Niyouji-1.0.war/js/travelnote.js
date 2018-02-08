@@ -63,6 +63,9 @@ const View = {
         },
         addPage: function (travelnotePage) {
             var $newTravelnotePage = $("#travelnote_page_template").clone();
+            var textContent = travelnotePage.createTime.substring(10, 16)
+                + (travelnotePage.textContent==null?"":"<br>"+travelnotePage.textContent);
+            $newTravelnotePage.find(".page_content").html(textContent);
             $("#travelnote .container").append($newTravelnotePage);
         }
 
