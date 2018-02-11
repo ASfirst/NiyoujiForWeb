@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     Init.initLayout1Width();
-    Init.initTravelnote();
+    Init.initAll();
     Controller.bindListener();
 });
 
@@ -12,10 +12,11 @@ const Init = {
             $("#layout1").css("width", usedWidth + "px");
         }
         ,
-        initTravelnote: function () {
+        initAll: function () {
             var travelnoteId = RequestParametersUtil.getParameter("travelnoteId");
             Model.travelnoteHandler.obtainingTravelnote(travelnoteId, function (receivedTravelnote) {
 
+                //obtain the NiyoujiUser datasource.
                 var performerId = receivedTravelnote.performerId;
                 Model.niyoujiUserHandler.obtainingNiyoujiUser(performerId, function (niyoujiUser) {
                     View.actionBox.setPerformerNickname(niyoujiUser.nickname);
@@ -30,6 +31,11 @@ const Init = {
                 });
                 View.travelnoteView.hideTemplatePage();
 
+                //view to appraises
+                receivedTravelnote.appraises.forEach(function (value) {
+                    View.appraiseArea.addAppraise(value);
+                });
+                View.appraiseArea.hideAppraiseTemplate();
             });
         }
 
@@ -38,6 +44,9 @@ const Init = {
 
 const Controller = {
     bindListener: function () {
+        $("#share_button").click(function () {
+            View.appraiseArea.focusToHere();
+        });
     }
 };
 
@@ -145,7 +154,6 @@ const View = {
         }
 
     },
-
     barrageView: {
         addBarrage: function ($newTravelnotePage, barrage) {
             var $trajectory = $newTravelnotePage.find(".trajectory");
@@ -171,6 +179,24 @@ const View = {
             $barrage.animate({right: '120%'}, 12000, function () {
                 View.barrageView.displayBarrage($barrage);
             });
+        }
+    }
+    ,
+    appraiseArea: {
+        addAppraise: function (appraise) {
+            var $newAppraise = $("#appraise_area").find("#appraise_template").clone();
+            $newAppraise.attr("id", "");
+            $newAppraise.find(".appraise_nickname").html(appraise.nickname);
+            $newAppraise.find(".appraise_content").html(appraise.content);
+            $newAppraise.find(".appraise_time").html(appraise.createTime.substring(0, 16));
+
+            $("#appraise_area").append($newAppraise);
+        },
+        hideAppraiseTemplate: function () {
+            $("#appraise_area").find("#appraise_template").hide();
+        },
+        focusToHere: function () {
+            location.href = "#appraise_area";
         }
     }
 };

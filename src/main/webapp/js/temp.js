@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     Init.initLayout1Width();
-    Init.initTravelnote();
+    Init.initAll();
     Controller.bindListener();
 });
 
@@ -12,7 +12,7 @@ const Init = {
             $("#layout1").css("width", usedWidth + "px");
         }
         ,
-        initTravelnote: function () {
+        initAll: function () {
             var travelnoteId = RequestParametersUtil.getParameter("travelnoteId");
             Model.travelnoteHandler.obtainingTravelnote(travelnoteId, function (receivedTravelnote) {
                 View.travelnoteView.setTitle(receivedTravelnote.travelnoteTitle);

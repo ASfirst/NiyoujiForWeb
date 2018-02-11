@@ -27,4 +27,5 @@ public interface AppraiseMapper
 	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_4 +
 			" WHERE travelnote_id=#{travelnoteId} ORDER BY create_time")
 	ArrayList<Appraise> getAppraisesByTravelnoteId(String travelnoteId);
+	
 }

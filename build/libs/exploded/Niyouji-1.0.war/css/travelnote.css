@@ -133,3 +133,7 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.appraise .appraise_content {
+	color: #000000;
+	font-weight: bold;
+}
