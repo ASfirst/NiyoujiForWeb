@@ -125,3 +125,11 @@
 		;
 	background-color: #145F0E;
 }
+#appraise_area{
+	margin-top: 15px;
+
+}
+#appraise_area .appraise {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

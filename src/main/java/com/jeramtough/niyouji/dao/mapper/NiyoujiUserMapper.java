@@ -11,9 +11,13 @@ import org.springframework.stereotype.Repository;
  */
 @Mapper
 @Repository
-public interface PrimaryUserMapper
+public interface NiyoujiUserMapper
 {
 	@Select("SELECT nickname FROM " + RandlDatabaseProperty.TABLE_NAME_2 +
 			" WHERE user_id = #{userId}")
 	String getUserNickname(@Param("userId") String userId);
+	
+	@Select("SELECT surface_image_url FROM " + RandlDatabaseProperty.TABLE_NAME_2 +
+			" WHERE user_id = #{userId}")
+	String getSurfaceImageUrl(@Param("userId") String userId);
 }

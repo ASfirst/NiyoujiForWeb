@@ -15,6 +15,13 @@ const Init = {
         initTravelnote: function () {
             var travelnoteId = RequestParametersUtil.getParameter("travelnoteId");
             Model.travelnoteHandler.obtainingTravelnote(travelnoteId, function (receivedTravelnote) {
+
+                var performerId = receivedTravelnote.performerId;
+                Model.niyoujiUserHandler.obtainingNiyoujiUser(performerId, function (niyoujiUser) {
+                    View.actionBox.setPerformerNickname(niyoujiUser.nickname);
+                    View.actionBox.setPerformerSurfaceImage(niyoujiUser.surfaceImageUrl);
+                });
+
                 View.travelnoteView.setTitle(receivedTravelnote.travelnoteTitle);
                 View.travelnoteView.setDate(receivedTravelnote.createTime);
 
@@ -51,9 +58,32 @@ const Model = {
             });
         }
     }
+    ,
+    niyoujiUserHandler: {
+        obtainingNiyoujiUser: function (userId, listener) {
+            if (userId == null) {
+                return;
+            }
+            var url = "getNiyoujiUser.do?userId=" + userId;
+            $.get(url, function (data, status) {
+                if (status === "success") {
+                    listener(data);
+                }
+            });
+        }
+    }
 };
 
 const View = {
+    actionBox: {
+        setPerformerNickname: function (nickname) {
+            $("#action_box").find("#performer_nickname").html(nickname);
+        }
+        ,
+        setPerformerSurfaceImage: function (surfaceImageUrl) {
+            $("#action_box").find("#performer_surface_image").attr("src", surfaceImageUrl);
+        }
+    },
     travelnoteView: {
         setTitle: function (title) {
             $("#travelnote #travelnote_title").html(title);
@@ -80,7 +110,7 @@ const View = {
             }
             else {
                 var usedWidth = $(window).width();
-                $newTravelnotePage.find(".video video").attr("width",usedWidth);
+                $newTravelnotePage.find(".video video").attr("width", usedWidth);
                 $newTravelnotePage.find(".video video").attr("src", travelnotePage.resourceUrl);
                 $newTravelnotePage.find(".image").hide();
             }

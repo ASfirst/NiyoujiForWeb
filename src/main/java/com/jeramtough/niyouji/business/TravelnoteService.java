@@ -17,7 +17,7 @@ import java.util.List;
 public class TravelnoteService implements TravelnoteBusiness
 {
 	private PerformingRoomsManager performingRoomsManager;
-	private PrimaryUserMapper primaryUserMapper;
+	private NiyoujiUserMapper niyoujiUserMapper;
 	private TravelnoteMapper travelnoteMapper;
 	private TravelnotePageMapper travelnotePageMapper;
 	private AppraiseMapper appraiseMapper;
@@ -25,12 +25,12 @@ public class TravelnoteService implements TravelnoteBusiness
 	
 	@Autowired
 	public TravelnoteService(PerformingRoomsManager performingRoomsManager,
-			PrimaryUserMapper primaryUserMapper, TravelnoteMapper travelnoteMapper,
+			NiyoujiUserMapper niyoujiUserMapper, TravelnoteMapper travelnoteMapper,
 			TravelnotePageMapper travelnotePageMapper, AppraiseMapper appraiseMapper,
 			BarrageMapper barrageMapper)
 	{
 		this.performingRoomsManager = performingRoomsManager;
-		this.primaryUserMapper = primaryUserMapper;
+		this.niyoujiUserMapper = niyoujiUserMapper;
 		this.travelnoteMapper = travelnoteMapper;
 		this.travelnotePageMapper = travelnotePageMapper;
 		this.appraiseMapper = appraiseMapper;
@@ -63,7 +63,7 @@ public class TravelnoteService implements TravelnoteBusiness
 			
 			//这部分得到nickname业务代码已完成哦
 			String performerId = travelnote.getPerformerId();
-			String nickname = primaryUserMapper.getUserNickname(performerId);
+			String nickname = niyoujiUserMapper.getUserNickname(performerId);
 			liveTravelnoteCover.setPerformerNickname(nickname);
 			
 			liveTravelnoteCovers[i] = liveTravelnoteCover;
@@ -102,7 +102,7 @@ public class TravelnoteService implements TravelnoteBusiness
 					.getAppraisesCountByTravelnoteId(travelnote.getTravelnoteId()));
 			
 			String performerId = travelnote.getPerformerId();
-			String nickname = primaryUserMapper.getUserNickname(performerId);
+			String nickname = niyoujiUserMapper.getUserNickname(performerId);
 			finishedTravelnoteCover.setPerformerNickname(nickname);
 			
 			ArrayList<TravelnotePage> travelnotePages =

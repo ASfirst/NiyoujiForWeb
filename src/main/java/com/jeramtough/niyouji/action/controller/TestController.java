@@ -6,7 +6,7 @@ import com.jeramtough.niyouji.bean.travelnote.Barrage;
 import com.jeramtough.niyouji.bean.travelnote.Travelnote;
 import com.jeramtough.niyouji.bean.travelnote.TravelnotePage;
 import com.jeramtough.niyouji.dao.mapper.BarrageMapper;
-import com.jeramtough.niyouji.dao.mapper.PrimaryUserMapper;
+import com.jeramtough.niyouji.dao.mapper.NiyoujiUserMapper;
 import com.jeramtough.niyouji.dao.mapper.TravelnoteMapper;
 import com.jeramtough.niyouji.dao.mapper.TravelnotePageMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +24,17 @@ public class TestController
 	private TravelnotePageMapper travelnotePageMapper;
 	private TravelnoteMapper travelnoteMapper;
 	private BarrageMapper barrageMapper;
-	private PrimaryUserMapper primaryUserMapper;
+	private NiyoujiUserMapper niyoujiUserMapper;
 	
 	@Autowired
 	public TestController(TravelnotePageMapper travelnotePageMapper,
 			TravelnoteMapper travelnoteMapper, BarrageMapper barrageMapper,
-			PrimaryUserMapper primaryUserMapper)
+			NiyoujiUserMapper niyoujiUserMapper)
 	{
 		this.travelnotePageMapper = travelnotePageMapper;
 		this.travelnoteMapper = travelnoteMapper;
 		this.barrageMapper = barrageMapper;
-		this.primaryUserMapper = primaryUserMapper;
+		this.niyoujiUserMapper = niyoujiUserMapper;
 	}
 	
 	@RequestMapping("/hello")
@@ -105,7 +105,7 @@ public class TestController
 	public String getNicknameTest(
 			@RequestParam(value = "userId", required = false, defaultValue = "0") String userId)
 	{
-		return primaryUserMapper.getUserNickname(userId);
+		return niyoujiUserMapper.getUserNickname(userId);
 	}
 	
 	@RequestMapping("/getRowCountByTravelnoteId")
