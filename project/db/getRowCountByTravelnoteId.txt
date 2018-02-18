@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `getRowCountByTravelnoteId`(`in_travelnote_id` int) RETURNS int(11)
+BEGIN
+	#Routine body goes here...
+	set @mytemp = 0;
+	SET @rowCount=(select row_count from (
+	SELECT  (@mytemp:=@mytemp+1) as row_count,travelnote_id,create_time 	FROM travelnote_tb ORDER BY create_time DESC) AS A
+	WHERE A.travelnote_id=in_travelnote_id);
+
+	RETURN @rowCount;
+END

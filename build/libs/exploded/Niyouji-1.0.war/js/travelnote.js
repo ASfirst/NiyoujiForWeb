@@ -25,6 +25,7 @@ const Init = {
 
                 View.travelnoteView.setTitle(receivedTravelnote.travelnoteTitle);
                 View.travelnoteView.setDate(receivedTravelnote.createTime);
+                View.travelnoteView.setLocation(receivedTravelnote.location);
 
                 receivedTravelnote.travelnotePages.forEach(function (value) {
                     View.travelnoteView.addPage(value);
@@ -44,9 +45,16 @@ const Init = {
 
 const Controller = {
     bindListener: function () {
-        $("#share_button").click(function () {
+        /*$("#share_button").click(function () {
+            View.appraiseArea.addAppraise({
+                appraiseId: "2",
+                travelnoteId: "1",
+                nickname: "测试用户1",
+                content: "克隆弹幕1",
+                createTime: "2018-01-31 12:36:26.0"
+            });
             View.appraiseArea.focusToHere();
-        });
+        });*/
     }
 };
 
@@ -99,6 +107,13 @@ const View = {
         },
         setDate: function (createTime) {
             $("#travelnote #travelnote_date").html(createTime.substring(0, 10));
+        },
+        setLocation: function (location) {
+            if (location == null) {
+                $("#travelnote #travelnote_location").hide();
+            } else {
+                $("#travelnote #travelnote_location").html(location);
+            }
         },
         addPage: function (travelnotePage) {
             var $newTravelnotePage = $("#travelnote_page_template").clone();
@@ -185,6 +200,7 @@ const View = {
     appraiseArea: {
         addAppraise: function (appraise) {
             var $newAppraise = $("#appraise_area").find("#appraise_template").clone();
+            $newAppraise.show();
             $newAppraise.attr("id", "");
             $newAppraise.find(".appraise_nickname").html(appraise.nickname);
             $newAppraise.find(".appraise_content").html(appraise.content);

@@ -60,6 +60,7 @@ public class TravelnoteService implements TravelnoteBusiness
 			liveTravelnoteCover.setPerformerId(travelnote.getPerformerId());
 			liveTravelnoteCover.setAudiencesCount(performingRooms.get(i).getAudiencesCount());
 			liveTravelnoteCover.setTravelnoteTitle(travelnote.getTravelnoteTitle());
+			liveTravelnoteCover.setLocation(travelnote.getLocation());
 			
 			//这部分得到nickname业务代码已完成哦
 			String performerId = travelnote.getPerformerId();
@@ -97,6 +98,7 @@ public class TravelnoteService implements TravelnoteBusiness
 			finishedTravelnoteCover.setCreateTime(travelnote.getCreateTime());
 			finishedTravelnoteCover.setPerformerId(travelnote.getPerformerId());
 			finishedTravelnoteCover.setTravelnoteTitle(travelnote.getTravelnoteTitle());
+			finishedTravelnoteCover.setLocation(travelnote.getLocation());
 			
 			finishedTravelnoteCover.setAppraiseCount(appraiseMapper
 					.getAppraisesCountByTravelnoteId(travelnote.getTravelnoteId()));
@@ -106,7 +108,7 @@ public class TravelnoteService implements TravelnoteBusiness
 			finishedTravelnoteCover.setPerformerNickname(nickname);
 			
 			ArrayList<TravelnotePage> travelnotePages =
-					travelnotePageMapper.getPagesLimitSize(travelnote.getTravelnoteId(), 2);
+					travelnotePageMapper.getPagesForLimitingSize(travelnote.getTravelnoteId(), 2);
 			int pagesSize = travelnotePages.size();
 			finishedTravelnoteCover.setFirstTravelnotePage(travelnotePages.get(0));
 			if (pagesSize > 1)

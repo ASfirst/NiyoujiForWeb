@@ -1,5 +1,6 @@
 package com.jeramtough.niyouji.business;
 
+import com.jeramtough.jtlog3.P;
 import com.jeramtough.jtutil.StringUtil;
 import com.jeramtough.niyouji.bean.socketmessage.SocketMessage;
 import com.jeramtough.niyouji.bean.socketmessage.action.ServerCommandActions;
@@ -63,6 +64,7 @@ public class PerformerService implements PerformerBusiness
 		travelnote.setCreateTime(createPerformingRoomCommand.getCreateTime());
 		travelnote.setCoverType(createPerformingRoomCommand.getCoverType());
 		travelnote.setCoverResourceUrl(createPerformingRoomCommand.getCoverResourceUrl());
+		travelnote.setLocation(createPerformingRoomCommand.getLocation());
 		
 		PerformingRoom performingRoom = new PerformingRoom(travelnote, webSocketSession);
 		performingRoomsManager.addPerformingRoom(createPerformingRoomCommand.getPerformerId(),
@@ -335,24 +337,24 @@ public class PerformerService implements PerformerBusiness
 			if (travelnote.getTravelnotePages().size() > 0)
 			{
 				travelnoteMapper.insertTravelnote(travelnote);
-				int travelnoteId=travelnoteMapper.getLastTravelnoteId();
+				int travelnoteId = travelnoteMapper.getLastTravelnoteId();
 				
 				ArrayList<TravelnotePage> travelnotePages = travelnote.getTravelnotePages();
 				for (TravelnotePage travelnotePage : travelnotePages)
 				{
-					travelnotePage.setTravelnoteId(travelnoteId+"");
+					travelnotePage.setTravelnoteId(travelnoteId + "");
 					travelnotePageMapper.insertTravelnotePage(travelnotePage);
-					int pageId=travelnotePageMapper.getLastPageId();
+					int pageId = travelnotePageMapper.getLastPageId();
 					
-					for (Barrage barrage:travelnotePage.getBarrages())
+					for (Barrage barrage : travelnotePage.getBarrages())
 					{
-						barrage.setTravelnoteId(travelnoteId+"");
-						barrage.setPageId(pageId+"");
+						barrage.setTravelnoteId(travelnoteId + "");
+						barrage.setPageId(pageId + "");
 						
 						barrageMapper.insertBarrage(barrage);
 						
-						Appraise appraise=new Appraise();
-						appraise.setTravelnoteId(travelnoteId+"");
+						Appraise appraise = new Appraise();
+						appraise.setTravelnoteId(travelnoteId + "");
 						appraise.setContent(barrage.getContent());
 						appraise.setCreateTime(barrage.getCreateTime());
 						appraise.setNickname(barrage.getNickname());

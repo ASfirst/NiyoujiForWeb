@@ -1,21 +1,46 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : ali
+ Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 50718
- Source Host           : 112.74.51.247:3306
+ Source Server Version : 50720
+ Source Host           : localhost:3306
  Source Schema         : niyouji_db
 
  Target Server Type    : MySQL
- Target Server Version : 50718
+ Target Server Version : 50720
  File Encoding         : 65001
 
- Date: 04/02/2018 15:50:20
+ Date: 13/02/2018 13:15:45
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for appraise_tb
+-- ----------------------------
+DROP TABLE IF EXISTS `appraise_tb`;
+CREATE TABLE `appraise_tb`  (
+  `appraise_id` int(11) NOT NULL AUTO_INCREMENT,
+  `travelnote_id` int(11) DEFAULT NULL,
+  `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `create_time` datetime(0) DEFAULT NULL,
+  PRIMARY KEY (`appraise_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of appraise_tb
+-- ----------------------------
+INSERT INTO `appraise_tb` VALUES (1, 4, '测试用户', '老铁们，给个双击666', '2018-01-31 16:36:26');
+INSERT INTO `appraise_tb` VALUES (2, 1, '测试用户', '克隆弹幕', '2018-01-31 12:36:26');
+INSERT INTO `appraise_tb` VALUES (3, 4, '测试用户', '盲僧我最爱', '2018-02-11 23:47:45');
+INSERT INTO `appraise_tb` VALUES (8, 4, '测试用户', '摸了了', '2018-02-12 13:20:49');
+INSERT INTO `appraise_tb` VALUES (9, 4, '测试用户', '噢噢', '2018-02-12 13:21:07');
+INSERT INTO `appraise_tb` VALUES (10, 4, '测试用户', '噢噢噢', '2018-02-12 13:22:26');
+INSERT INTO `appraise_tb` VALUES (11, 4, '测试用户', '纽扣电池', '2018-02-12 13:25:47');
+INSERT INTO `appraise_tb` VALUES (12, 4, '测试用户', 'KKK', '2018-02-12 13:25:58');
 
 -- ----------------------------
 -- Table structure for barrage_tb
@@ -30,12 +55,14 @@ CREATE TABLE `barrage_tb`  (
   `content` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   `create_time` datetime(0) DEFAULT NULL,
   PRIMARY KEY (`barrage_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of barrage_tb
 -- ----------------------------
-INSERT INTO `barrage_tb` VALUES (1, 5, 3, '测试用户', 1, '老铁们，给个双击666', '2018-01-31 16:36:26');
+INSERT INTO `barrage_tb` VALUES (1, 4, 9, '测试用户', 1, '老铁们，给个双击666', '2018-01-31 16:36:26');
+INSERT INTO `barrage_tb` VALUES (2, 1, 1, '测试用户', 0, '克隆弹幕', '2018-01-31 12:36:26');
+INSERT INTO `barrage_tb` VALUES (3, 4, 9, '测试用户', 0, '观众弹幕', '2018-01-31 16:33:26');
 
 -- ----------------------------
 -- Table structure for niyouji_user_tb
@@ -70,9 +97,9 @@ INSERT INTO `travelnote_page_tb` VALUES (1, 1, '2018-01-31 15:51:50', 'picture_a
 INSERT INTO `travelnote_page_tb` VALUES (2, 2, '2018-01-31 16:15:39', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_11959651.jpg', NULL, NULL);
 INSERT INTO `travelnote_page_tb` VALUES (3, 3, '2018-01-31 16:34:17', 'picture_and_word', 2, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_100542295.jpg', '重新出发', NULL);
 INSERT INTO `travelnote_page_tb` VALUES (4, 3, '2018-01-31 16:34:49', 'video', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/videos/vdo_1_42235108.mp4', NULL, NULL);
-INSERT INTO `travelnote_page_tb` VALUES (5, 3, '2018-01-31 16:35:28', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_225163245.jpg', '去车站吧现在，妈的，现在我的腿子好冷啊\n一到冷天这腿子就这样', NULL);
-INSERT INTO `travelnote_page_tb` VALUES (6, 3, '2018-01-31 16:37:50', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_204735570.jpg', '继续，目标地铁口，到了地铁口我就结束第一章游记吧', NULL);
-INSERT INTO `travelnote_page_tb` VALUES (7, 3, '2018-01-31 16:39:25', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_235189710.jpg', '我要过去对面，阳光啊，我来了', NULL);
+INSERT INTO `travelnote_page_tb` VALUES (5, 3, '2018-01-31 16:35:28', 'picture_and_word', 3, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_225163245.jpg', '去车站吧现在，妈的，现在我的腿子好冷啊\n一到冷天这腿子就这样', NULL);
+INSERT INTO `travelnote_page_tb` VALUES (6, 3, '2018-01-31 16:37:50', 'picture_and_word', 4, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_204735570.jpg', '继续，目标地铁口，到了地铁口我就结束第一章游记吧', NULL);
+INSERT INTO `travelnote_page_tb` VALUES (7, 3, '2018-01-31 16:39:25', 'picture_and_word', 1, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_235189710.jpg', '我要过去对面，阳光啊，我来了', NULL);
 INSERT INTO `travelnote_page_tb` VALUES (8, 3, '2018-01-31 16:41:52', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_198808167.jpg', '准备到地铁口了加油！！！', NULL);
 INSERT INTO `travelnote_page_tb` VALUES (9, 4, '2018-01-31 16:45:00', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_47236774.jpg', '买票中。。。', NULL);
 INSERT INTO `travelnote_page_tb` VALUES (10, 4, '2018-01-31 16:46:54', 'picture_and_word', 0, 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_130962305.jpg', '已经站，进来了', NULL);
@@ -102,5 +129,23 @@ INSERT INTO `travelnote_tb` VALUES (1, 1, '2018-01-31 15:51:43', 'image', 'http:
 INSERT INTO `travelnote_tb` VALUES (2, 1, '2018-01-31 16:15:37', 'image', 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/cover_1517386536735.jpg', '途径', 0);
 INSERT INTO `travelnote_tb` VALUES (3, 1, '2018-01-31 16:33:48', 'image', 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/cover_1517387623548.jpg', '去买票', 0);
 INSERT INTO `travelnote_tb` VALUES (4, 1, '2018-01-31 16:44:57', 'image', 'http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/cover_1517388296887.jpg', '已到地铁口', 0);
+
+-- ----------------------------
+-- Function structure for getRowCountByTravelnoteId
+-- ----------------------------
+DROP FUNCTION IF EXISTS `getRowCountByTravelnoteId`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `getRowCountByTravelnoteId`(`in_travelnote_id` int) RETURNS int(11)
+BEGIN
+	#Routine body goes here...
+	set @mytemp = 0;
+	SET @rowCount=(select row_count from (
+	SELECT  (@mytemp:=@mytemp+1) as row_count,travelnote_id,create_time 	FROM travelnote_tb ORDER BY create_time DESC) AS A
+	WHERE A.travelnote_id=in_travelnote_id);
+
+	RETURN @rowCount;
+END
+;;
+delimiter ;
 
 SET FOREIGN_KEY_CHECKS = 1;

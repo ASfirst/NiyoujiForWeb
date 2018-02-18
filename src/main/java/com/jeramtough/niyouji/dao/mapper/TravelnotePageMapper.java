@@ -39,6 +39,6 @@ public interface TravelnotePageMapper
 	
 	@Select("SELECT * FROM " + DatabaseProperty.TABLE_NAME_2 +
 			" WHERE travelnote_id=#{travelnoteId} LIMIT #{size}")
-	ArrayList<TravelnotePage> getPagesLimitSize(@Param("travelnoteId") String travelnoteId,
+	ArrayList<TravelnotePage> getPagesForLimitingSize(@Param("travelnoteId") String travelnoteId,
 			@Param("size") int size);
 }

@@ -20,7 +20,7 @@ public interface TravelnoteMapper
 {
 	@Insert("INSERT INTO " + DatabaseProperty.TABLE_NAME_1 + " VALUES(" + "#{travelnoteId}," +
 			"#{performerId}," + "#{createTime}," + "#{coverType}," + "#{coverResourceUrl}," +
-			"#{travelnoteTitle}," + "#{attentionsCount})")
+			"#{travelnoteTitle}," + "#{attentionsCount}," + "#{location})")
 	void insertTravelnote(Travelnote travelnote);
 	
 	@Select("SELECT COUNT(*) FROM " + DatabaseProperty.TABLE_NAME_1)
