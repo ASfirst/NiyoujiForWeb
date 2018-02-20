@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Untitled Document</title>
+<title>你游记</title>
 <link href="css/travelnote.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/RequetParameters.js"></script>
-<!--<script type="text/javascript" src="js/baidu-share.js"></script>-->
 <script type="text/javascript" src="js/travelnote.js"></script>
 </head>
 <body>
@@ -20,10 +19,8 @@
     <div class="container">
       <div class="row" id="action_box">
         <div class="col-2"></div>
-        <div class="col-5"><img id="performer_surface_image" src="images/surface_image.jpg" width="40" height="40" alt="" class="rounded-circle"/> <span id="performer_nickname" style="font-size: 15px">Nickname</span> </div>
-        <div class="col-5" align="right"> 
-          <!--<img id="share_button" src="images/share.png" width="40" height="40" alt=""/> --> 
-        </div>
+        <div class="col-10"><img id="performer_surface_image" src="images/surface_image.jpg" width="40" height="40" alt="" class="rounded-circle"/> <span id="performer_nickname" style="font-size: 15px">Nickname</span> </div>
+      
       </div>
     </div>
   </div>
@@ -48,12 +45,13 @@
           <!--视频资源-->
           <div class="video">
             <video controls="controls">您的浏览器版本不支持播放视频</video>
+			  <div class="play_reminder" style="display: none;">点击左下角播放按钮播放短视频</div>
           </div>
           <!--图片资源-->
           <div class="col-12 image">
             <picture>
-              <source srcset="http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_204735570.jpg" type="image/svg+xml">
-              <img src="http://niyouji.oss-cn-shenzhen.aliyuncs.com/images/img_1_204735570.jpg" class="img-fluid" alt="回退元素"/> </picture>
+              <source srcset="" type="image/svg+xml">
+              <img src="" class="img-fluid" alt="回退元素"/> </picture>
             <!--边框--> 
             <img class="frame rounded" src="images/pwthemes/0/frame.png" alt=""/> </div>
           <!--page时间--> 

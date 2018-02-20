@@ -130,13 +130,21 @@ const View = {
                 $newTravelnotePage.find(".image picture img")
                     .attr("src", travelnotePage.resourceUrl);
 
-                $newTravelnotePage.find(".video").hide();
+
+                $newTravelnotePage.find(".video").remove();
             }
             else {
                 var usedWidth = $(window).width();
-                $newTravelnotePage.find(".video video").attr("width", usedWidth);
-                $newTravelnotePage.find(".video video").attr("src", travelnotePage.resourceUrl);
-                $newTravelnotePage.find(".image").hide();
+                var $newTravelnotePageVideoView = $newTravelnotePage.find(".video video");
+                $newTravelnotePageVideoView.attr("width", usedWidth);
+                $newTravelnotePageVideoView.attr("src", travelnotePage.resourceUrl);
+                $newTravelnotePage.find(".image").remove();
+                $newTravelnotePage.click(function () {
+                    $newTravelnotePage.find(".play_reminder").show();
+                    setTimeout(function () {
+                        $newTravelnotePage.find(".play_reminder").hide();
+                    }, 1000);
+                });
             }
 
             //set theme
