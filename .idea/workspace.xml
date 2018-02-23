@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Gradle : com.jeramtough : Niyouji-1.0.war (exploded)" />
+      <artifact name="Gradle : com.jeramtough : Niyouji-1.0.war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2512b9b-086d-484d-b2c8-54513dc89039" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Niyouji-1.0.war" afterPath="$PROJECT_DIR$/build/libs/Niyouji-1.0.war" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/css/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/images/pwthemes/2/frame.png" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/images/pwthemes/2/frame.png" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/travelnote.js" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/js/travelnote.js" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/test.html" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/test.html" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/travelnote.html" afterPath="$PROJECT_DIR$/build/libs/exploded/Niyouji-1.0.war/travelnote.html" />
-      <change beforePath="$PROJECT_DIR$/project/db/niyouji_db.sql" afterPath="$PROJECT_DIR$/project/db/niyouji_db.sql" />
-      <change beforePath="$PROJECT_DIR$/project/issue.txt" afterPath="$PROJECT_DIR$/project/issue.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/src/main/webapp/_notes/dwsync.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/pwthemes/2/frame.png" afterPath="$PROJECT_DIR$/src/main/webapp/images/pwthemes/2/frame.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/travelnote.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.html" afterPath="$PROJECT_DIR$/src/main/webapp/test.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/travelnote.html" afterPath="$PROJECT_DIR$/src/main/webapp/travelnote.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/AudienceLeaveCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/AudienceLeaveCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/EnterPerformingRoomCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/EnterPerformingRoomCommand.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -86,11 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issue.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="issue.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/issue.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
               <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AudienceLeaveCommand.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/AudienceLeaveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
+              <caret line="30" column="5" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -516,7 +513,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-2" />
     <option name="width" value="1378" />
     <option name="height" value="735" />
@@ -597,7 +594,13 @@
             <path>
               <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
               <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
@@ -609,6 +612,63 @@
               <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="socketmessage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="socketmessage" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Niyouji" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="niyouji" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="socketmessage" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="audience" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Niyouji" type="b2602c69:ProjectViewProjectNode" />
@@ -636,9 +696,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jeramtough.niyouji.business" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jeramtough.niyouji.component.communicate" />
       <recent name="com.jeramtough.niyouji.bean" />
@@ -646,16 +703,19 @@
       <recent name="com.jeramtough.niyouji.bean.socket" />
       <recent name="com.jeramtough.niyouji.entrance" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.jeramtough.niyouji.dao.mapper" />
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\bean\socketmessage\command\audience" />
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\bean\travelnote" />
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\bean\socketmessage\command\performer" />
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\webapp\WEB-INF" />
       <recent name="E:\Codes\IdeaCodes\Niyouji\src\main\java\com\jeramtough\niyouji\dao\mapper" />
-      <recent name="E:\Codes\IdeaCodes\Niyouji\src\test\java\websocket" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jeramtough.niyouji.dao.mapper" />
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jeramtough.niyouji.business" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -813,6 +873,7 @@
     </configuration>
     <configuration name="tomcat-8.5.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="Gradle : com.jeramtough : Niyouji-1.0.war (exploded)">
           <settings>
@@ -972,7 +1033,7 @@
       <workItem from="1518788799201" duration="5432000" />
       <workItem from="1518923842883" duration="13840000" />
       <workItem from="1519356446896" duration="1272000" />
-      <workItem from="1519384406094" duration="5844000" />
+      <workItem from="1519384406094" duration="7942000" />
     </task>
     <servers />
   </component>
@@ -1009,11 +1070,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338133000" />
+    <option name="totallyTimeSpent" value="340231000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270869" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
@@ -1036,7 +1096,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3270869" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13086233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1063,7 +1123,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/mapper/ConfigurationMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/dao/mapper/AliConfigurationMapper.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/1.3.1/59b2a888105b7c90c382f1fc5d3d4c4c7c65c8f0/mybatis-spring-1.3.1-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1424,7 +1483,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
+          <caret line="30" column="5" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1441,6 +1500,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeramtough/niyouji/bean/socketmessage/command/audience/AudienceLeaveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
