@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"> 
-	<title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
-	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
 <body>
+<script>
+    var a = "发送第三方斯蒂芬撒 的萨芬的萨芬[a2][a12]sfsa dsfsafsaf [a12]";
+    a=replaceJtMoji(a);
+    console.info(a);
 
-<div id="myCarousel" class="carousel slide">
-	<!-- 轮播（Carousel）指标 -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-		<li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>   
-	<!-- 轮播（Carousel）项目 -->
-	<div class="carousel-inner">
-		<div class="item active">
-			<img src="images/pwthemes/2/frame.png" alt="First slide">
-		</div>
-		<div class="item">
-			<img src="images/pwthemes/1/frame.png" alt="Second slide">
-		</div>
-		<div class="item">
-			<img src="images/pwthemes/3/frame.png" alt="Third slide">
-		</div>
-	</div>
-	<!-- 轮播（Carousel）导航 -->
-	<a class="carousel-control left" href="#myCarousel" 
-	   data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#myCarousel" 
-	   data-slide="next">&rsaquo;</a>
-</div> 
+    function replaceJtMoji(text) {
+        var pattern = new RegExp("\\[[a-z][0-9]+\\]", "g");
+        var jtMojiTemlate1 = "<span><img src='images/jtEmoji/";
+        var jtMojiTemlate2 = ".png' width='18' height='18' alt=''/></span>";
+        var newText = text;
+        for (; ;) {
+            var result = pattern.exec(text);
+            if (result != null) {
+                var a = result[0].substring(1, result[0].length - 1);
+                var jtMojiTemlate = jtMojiTemlate1 + a + jtMojiTemlate2;
+                newText = newText.replace(result[0], jtMojiTemlate);
+                //console.info(newText);
+                //console.info(result[0] + ":" + result.index);
+            }
+            else {
+                break;
+            }
+        }
+        return newText;
+    }
+
+
+</script>
 
 </body>
 </html>

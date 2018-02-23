@@ -74,6 +74,27 @@ const Model = {
                 }
             });
         }
+        ,
+        replaceJtEmoji: function (text) {
+            var pattern = new RegExp("\\[[a-z][0-9]+\\]", "g");
+            var jtMojiTemlate1 = "<span><img src='images/jtEmoji/";
+            var jtMojiTemlate2 = ".png' width='18' height='18' alt=''/></span>";
+            var newText = text;
+            for (; ;) {
+                var result = pattern.exec(text);
+                if (result != null) {
+                    var a = result[0].substring(1, result[0].length - 1);
+                    var jtMojiTemlate = jtMojiTemlate1 + a + jtMojiTemlate2;
+                    newText = newText.replace(result[0], jtMojiTemlate);
+                    //console.info(newText);
+                    //console.info(result[0] + ":" + result.index);
+                }
+                else {
+                    break;
+                }
+            }
+            return newText;
+        }
     }
     ,
     niyoujiUserHandler: {
@@ -118,9 +139,14 @@ const View = {
         addPage: function (travelnotePage) {
             var $newTravelnotePage = $("#travelnote_page_template").clone();
 
-            //set text content and time.
-            var textContent = travelnotePage.createTime.substring(10, 16)
-                + (travelnotePage.textContent == null ? "" : "<br>" + travelnotePage.textContent);
+            //set text content with time.
+            var textContent =
+                (travelnotePage.textContent == null ? "" : travelnotePage.textContent + "<br>")
+                + travelnotePage.createTime.substring(10, 16);
+
+            //set the jtEmojis of text content
+            textContent = Model.travelnoteHandler.replaceJtEmoji(textContent);
+
             $newTravelnotePage.find(".page_content").html(textContent);
 
             //set resource
@@ -129,7 +155,6 @@ const View = {
                     .attr("srcset", travelnotePage.resourceUrl);
                 $newTravelnotePage.find(".image picture img")
                     .attr("src", travelnotePage.resourceUrl);
-
 
                 $newTravelnotePage.find(".video").remove();
             }
