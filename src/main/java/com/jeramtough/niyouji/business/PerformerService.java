@@ -328,6 +328,8 @@ public class PerformerService implements PerformerBusiness
 		{
 			e.printStackTrace();
 		}
+		
+		//移除房间对象
 		performingRoomsManager.removePerformingRoom(performingRoom);
 		
 		//游记写入持久层

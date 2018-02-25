@@ -44,15 +44,25 @@ public class AudienceService implements AudienceBusiness
 		PerformingRoom performingRoom = performingRoomsManager
 				.getPerformingRoom(enterPerformingRoomCommand.getPerformerId());
 		
+		SocketMessage socketMessage1;
+		
+		//如果房间以失效
+		if (performingRoom == null)
+		{
+			socketMessage1 =
+					new SocketMessage(ServerCommandActions.DONT_EXIST_LIVE_TRAVELNOTE);
+			SocketSessionUtil.sendSocketMessage(session, socketMessage1);
+			
+			return;
+		}
+		
 		//将Travelnote实体返回给客户端初始化界面
 		Travelnote travelnote = performingRoom.getTravelnote();
-		SocketMessage socketMessage1 =
-				new SocketMessage(ServerCommandActions.RETURN_LIVE_TRAVELNOTE);
+		socketMessage1 = new SocketMessage(ServerCommandActions.RETURN_LIVE_TRAVELNOTE);
 		socketMessage1.setCommand(JSON.toJSONString(travelnote));
 		SocketSessionUtil.sendSocketMessage(session, socketMessage1);
 		
 		//将进入直播间的行为广播到各个，除了进入直播间的用户本身
-		//这里有个bug，用户直接进入，无法得知现在的观众数和点赞数
 		broadcastActionToPerformerAndAudiences(performingRoom.getPerformerSession(),
 				performingRoom.getAudienceSessions(), socketMessage);
 		
