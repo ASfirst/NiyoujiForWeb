@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public interface BarrageMapper
 {
 	@Insert("INSERT INTO " + DatabaseProperty.TABLE_NAME_3 + " VALUES(" + "#{barrageId}," +
-			"#{pageId}," + "#{travelnoteId}," + "#{nickname}," + "#{isPerformers}," +
+			"#{travelnoteId}," + "#{pageId}," + "#{nickname}," + "#{isPerformers}," +
 			"#{content}," + "#{createTime})")
 	void insertBarrage(Barrage barrage);
 	
