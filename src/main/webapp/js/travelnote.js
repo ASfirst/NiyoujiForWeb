@@ -165,10 +165,12 @@ const View = {
                 $newTravelnotePageVideoView.attr("src", travelnotePage.resourceUrl);
                 $newTravelnotePage.find(".image").remove();
                 $newTravelnotePage.click(function () {
-                    $newTravelnotePage.find(".play_reminder").show();
+                    var videoElement=$newTravelnotePage.find("video")[0];
+                    videoElement.play();
+                   /* $newTravelnotePage.find(".play_reminder").show();
                     setTimeout(function () {
                         $newTravelnotePage.find(".play_reminder").hide();
-                    }, 1000);
+                    }, 1000);*/
                 });
             }
 
