@@ -1,5 +1,6 @@
 package com.jeramtough.niyouji.action.controller;
 
+import com.fasterxml.jackson.core.util.JsonParserSequence;
 import com.jeramtough.jtlog3.P;
 import com.jeramtough.jtutil.DateTimeUtil;
 import com.jeramtough.niyouji.bean.travelnote.Barrage;
@@ -11,6 +12,7 @@ import com.jeramtough.niyouji.dao.mapper.TravelnoteMapper;
 import com.jeramtough.niyouji.dao.mapper.TravelnotePageMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -113,6 +115,58 @@ public class TestController
 	public String getRowCountByTravelnoteId(
 			@RequestParam(value = "travelnoteId", required = true) String travelnoteId)
 	{
-		return travelnoteMapper.getRowCountByTravelnoteId(travelnoteId)+"";
+		return travelnoteMapper.getRowCountByTravelnoteId(travelnoteId) + "";
+	}
+	
+	@PostMapping("/SetCarAccountRecharge")
+	@ResponseBody
+	public String setCarAccountRecharge()
+	{
+		String b="{\\\"result\\\":\\\"ok\\\"}";
+		String a= "{\"serverinfo\":\""+b+"\"}";
+		return a;
+	}
+	@PostMapping("/SetCarMove")
+	@ResponseBody
+	public String SetCarMove()
+	{
+		String b="{\\\"result\\\":\\\"ok\\\"}";
+		String a= "{\"serverinfo\":\""+b+"\"}";
+		return a;
+	}
+	
+	@PostMapping("/GetCarAccountBalance")
+	@ResponseBody
+	public String getCarAccountBalance()
+	{
+		return "{\"serverinfo\":\"{\\\"Balance\\\":800}\"}";
+	}
+	
+	@PostMapping("/GetTrafficLightConfigAction")
+	@ResponseBody
+	public String GetTrafficLightConfigAction()
+	{
+		String b="{\\\"RedTime\\\":\\\"25\\\", \\\"GreenTime\\\":\\\"55\\\", \\\"YellowTime\\\":\\\"5\\\"}";
+		String a= "{\"serverinfo\":\""+b+"\"}";
+		return a;
+	}
+	
+	@PostMapping("/GetAllSense")
+	@ResponseBody
+	public String GetAllSense()
+	{
+		String b="{\\\"pm2.5\\\":4,\\\"co2\\\":813,\\\"temperature\\\":19," +
+				"\\\"LightIntensity\\\":3000,\\\"humidity\\\":40}";
+		String a= "{\"serverinfo\":\""+b+"\"}";
+		return a;
+	}
+	
+	@PostMapping("/GetRoadStatus")
+	@ResponseBody
+	public String GetRoadStatus()
+	{
+		String b="{\\\"Status\\\":3}：";
+		String a= "{\"serverinfo\":\""+b+"\"}";
+		return a;
 	}
 }
